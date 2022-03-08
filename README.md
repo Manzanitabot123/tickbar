@@ -12,7 +12,6 @@ Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 
 
 ####Proximamente 🌟
-(No lo estoy asegurando)
 ```javascript
 Corrección de bugs
 Botones para cambiar la opacidad del fondo
