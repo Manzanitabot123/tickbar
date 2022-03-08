@@ -1,0 +1,29 @@
+{
+  "name": "Simple Custom Meet",
+  "version": "1.1.0",
+  "description": "Personaliza los colores y el fondo de tu Meet",
+  "manifest_version": 2,
+  "author": "Manzanitabot123",
+  "content_scripts": [
+    {
+        "matches": ["https://meet.google.com/*"],
+        "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Cambiar Imagen",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/imagenes/icono16.png",
+      "32": "/imagenes/icono64.png",
+      "48": "/imagenes/icono48.png",
+      "128": "/imagenes/icono128.png"
+    }
+  },
+  "icons": {
+    "16": "/imagenes/icono16.png",
+    "32": "/imagenes/icono64.png",
+    "48": "/imagenes/icono48.png",
+    "128": "/imagenes/icono128.png"
+  }
+}
