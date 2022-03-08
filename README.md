@@ -6,8 +6,26 @@
 
 Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 
+### Descarga 🏹
+<p align="center">
+<a href="https://drive.google.com/uc?export=download&id=1SU82QGETRSa9NcFr7mq-ftJ35QTIATik" target="_blank">
+<img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK PLS">
+
+####Proximamente 🌟
+(No lo estoy asegurando)
+```javascript
+Corrección de bugs
+Botones para cambiar la opacidad del fondo
+Más opciones para el tiempo de intervalo de la extensión
+Poder subir archivos
+```
+  
 ## Estado 📥
-Funcionando :D
+Funcionando...
+ 
+### 📈 Desarrollador
+
+Soy **Manzanita** o tambien **Manzanitabot123** y actualmente solo programo para entreterme y aprender de mis errores...
 
 ## Licencia ©️
 AnimeFLV bot tiene la licencia MIT. Consulta el archivo `LICENCIA` para obtener más información. Si planea usar alguna parte de este código fuente en su propio bot, le agradecería que incluyera algún tipo de crédito en alguna parte. 
