@@ -8,10 +8,11 @@ Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 
 ### Descarga 🏹
 <a href="https://drive.google.com/uc?export=download&id=1SU82QGETRSa9NcFr7mq-ftJ35QTIATik" target="_blank">
-<img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a>
+<img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 
 ####Proximamente 🌟
+
 ```javascript
 Corrección de bugs
 Botones para cambiar la opacidad del fondo
