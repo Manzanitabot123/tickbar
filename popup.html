@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
-  <h1 style="text-align:center; color:green">Simple Custom Meet</h1>
-  <p style="text-align:center; color:red">La peor extensión. v1.1.1 🍎</p>
-  <input type="text" id="color" placeholder="Ingresa un link" /> 
-  </p>
-  <button >Cambiar imagen</button>
-  <script src="popup.js"></script>
-  <p style="color:blue">Si el espacio lo dejas en blanco la imagen actual se reestablecerá a "predeterminado" al darle al botón.</p>
+  <div class="container">
+    <a href="https://meet.google.com" target="_blank">
+    <img class =“right” title="Google Meet" src="https://media.discordapp.net/attachments/946261332854992917/950598027125608469/icono128.png" alt="Google Meet" style="width:66px">
+    </a>
+    <h1><font color="#1978ef">SIM</font><font color="#fcbc05">PLE</font><font color="#04a444">ㅤCUS</font><font color="#f94a0c">TOM</font><font color="#f3efe6">ㅤME</font><font color="#04632a">ET</font></h1>
+      <input type="text" name="name" class="question" id="color" required autocomplete="off" />
+      <label for="color"><span>Ingresa el link</span></label>
+    <p style="color:#fa6e6e;font-size:13px">Si el espacio lo dejas en blanco la imagen actual se reestablecerá a "predeterminado" al darle al botón.</p>
+    <button class="button button-success" style="font-size:20px">Cambiar imagen</button>
+    <script src="popup.js"></script>
+    <br/>
+    <div style="color:#c5d5eb;font-size:20px"  id="clock"><script src="content.js"></script></div>
+    <p style="font-size:9px">De: Manzanitabot123 🍎 - Versión: 1.1.2</p>
 </body>
 </html>
 

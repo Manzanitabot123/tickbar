@@ -2,12 +2,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
    {
    if (elenlace == "") {
-      try{
-         var highestTimeoutId = setInterval(";");
-         for (var i = 0 ; i < highestTimeoutId ; i++) {
-            clearInterval(i); 
-         }
-      } catch { }
+      detenerintervalo();
       document.querySelector("#ow3").style.backgroundColor = "#202124";
    } else { 
       try{
@@ -16,12 +11,6 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             }
             console.log(isImage(elenlace))
             if(isImage(elenlace) === true){
-               try{
-                  var highestTimeoutId = setInterval(";");
-                  for (var i = 0 ; i < highestTimeoutId ; i++) {
-                     clearInterval(i); 
-                  }
-               } catch { };
                changeColor(elenlace);
                console.log("La imagen es valida");
             } else {
@@ -32,7 +21,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
          console.log("La imagen no es valida");
       }
    }
-   } else {alert("no mames")}
+   } else {alert("Solo puedes hacer eso dentro de una llamada")}
 })
 
  function changeColor(elenlacexd){
@@ -136,7 +125,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    try{
       settingsxd = document.getElementsByClassName('VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf txTes OcVpRe CIYi0d jvUMfb yOCuXd VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c');
                   for(var i = 0; i < settingsxd.length; i++){
-                     settingsxd[i].style.background="#ffffff00";
+                     settingsxd[i].style.background="#202124d1";
                   }
    } catch { console.log("ERROR AL CAMBIAR LA VENTANA DE AJUSTES")}
 
@@ -145,7 +134,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    //PRESENTAR PANTALLA MENU
    presentarpantalla = document.getElementsByClassName("VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf txTes OcVpRe iGzNwd VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c");
    for(var i = 0; i < presentarpantalla.length; i++){
-      presentarpantalla[i].style.backgroundColor="#0000";
+      presentarpantalla[i].style.backgroundColor="#202124d1";
    }
    } catch { }
    
@@ -172,7 +161,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    //los que levantaron la mano
    listamano1 = document.getElementsByClassName('HeObRc KQZr0e');
    for(var i = 0; i < listamano1.length; i++){
-   listamano1[i].style.background = "#fff0";
+   listamano1[i].style.background = "#202124d1";
    }
    } catch { }
 
@@ -253,7 +242,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    // LEVANTAR LA MANO ANIMACIÓN
    levantarmano2 = document.getElementsByClassName("S41QRd");
    for(var i = 0; i < levantarmano2.length; i++){
-   levantarmano2[i].style.backgroundColor="#0000";
+   levantarmano2[i].style.backgroundColor="#202124d1";
    }
    } catch { }
 
@@ -262,7 +251,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    try{
       ping2 = document.getElementsByClassName('ke9kZe-Rgw69b FHBy3b');
                for(var i = 0; i < ping2.length; i++){
-                  ping2[i].style.background="#ffffff00";
+                  ping2[i].style.background="#202124d1";
                }
    } catch { }
 
@@ -363,15 +352,11 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
       }
       } catch {console.log("ERROR AL CAMBIAR LA VENTANA DE INFO")};
    } catch {console.log("ERROR AL CAMBIAR EL FONDO DE MENSAJERIA")};
-
-   var intervalId = null;
-   var varCounter = 0;
-      if(varCounter <= 1) {
          // document.querySelector(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db").style.background = "#36373a45"
-         intervalId = setInterval(function() {
+   var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
          if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") === null)
-         {console.log("El intervalo se ha detenido") && clearInterval(intervalId)}
+         {clearInterval(id1)}
 
          //FUNCIONES
           try{
@@ -381,6 +366,11 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             alltext[i].style.color = "white";
             }
             } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
+
+            try{
+            tiempo();
+            } catch { }
+
             try{
             //BARRA DE ABAJO
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = "#20212400";
@@ -443,7 +433,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             try{
                settingsxd = document.getElementsByClassName('VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf txTes OcVpRe CIYi0d jvUMfb yOCuXd VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c');
                            for(var i = 0; i < settingsxd.length; i++){
-                              settingsxd[i].style.background="#ffffff00";
+                              settingsxd[i].style.background="#202124d1";
                            }
             } catch { console.log("ERROR AL CAMBIAR LA VENTANA DE AJUSTES")}
 
@@ -451,7 +441,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             //PRESENTAR PANTALLA MENU
             presentarpantalla = document.getElementsByClassName("VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf txTes OcVpRe iGzNwd VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c");
             for(var i = 0; i < presentarpantalla.length; i++){
-               presentarpantalla[i].style.backgroundColor="#0000";
+               presentarpantalla[i].style.backgroundColor="#202124d1";
             }
             } catch { }
 
@@ -475,7 +465,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             //los que levantaron la mano
             listamano1 = document.getElementsByClassName('HeObRc KQZr0e');
             for(var i = 0; i < listamano1.length; i++){
-            listamano1[i].style.background = "#fff0";
+            listamano1[i].style.background = "#202124d1";
             }
             } catch { }
 
@@ -547,7 +537,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             // LEVANTAR LA MANO ANIMACIÓN
             levantarmano2 = document.getElementsByClassName("S41QRd");
             for(var i = 0; i < levantarmano2.length; i++){
-            levantarmano2[i].style.backgroundColor="#0000";
+            levantarmano2[i].style.backgroundColor="#202124d1";
             }
             } catch { }
             
@@ -555,7 +545,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             try{
                ping2 = document.getElementsByClassName('ke9kZe-Rgw69b FHBy3b');
                         for(var i = 0; i < ping2.length; i++){
-                           ping2[i].style.background="#ffffff00";
+                           ping2[i].style.background="#202124d1";
                         }
             } catch { }
 
@@ -648,17 +638,25 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             catch{
             console.log("ERROR")
             }}, 500)
-      } else {
-            clearInterval(intervalId);
-      }
    }
 
+function tiempo(){
+      var date = new Date(); 
+      var tiempocompleto
+      tiempocompleto=document.getElementsByClassName("MQKmmc SudKRc Q4etDd wYNW7d");  // Find the elements
+      for(var i = 0; i < tiempocompleto.length; i++){
+      tiempocompleto[i].innerText=`⏲ ${date.toLocaleString()}`;
+      }};
+
+function detenerintervalo(){
+      try{
+         var killId = setTimeout(function() {
+            for (var i = killId; i > 0; i--) clearInterval(i)
+          }, 1);
+          
+         console.log(id1, killId)
+          
+      } catch { }
+      };
+
 // https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg
-
-
-/*
-if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
-{
-  console.log("si")
-} else {console.log("no")}
-*/
