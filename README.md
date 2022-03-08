@@ -23,7 +23,7 @@ Automatizar la carga del fondo
   
 ## Estado 📥
 Funcionando...
- 
+
 ## Desarrollador 📈
 Soy **Manzanita** o tambien **Manzanitabot123** y actualmente solo programo para entreterme y aprender de mis errores...
 
