@@ -158,6 +158,15 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    }
    } catch { }
 
+   var presentandoahora;
+   try{
+   // X ESTA PRESENTANDO
+   presentandoahora = document.getElementsByClassName('MON6Vd P9KVBf');
+   for(var i = 0; i < presentandoahora.length; i++){
+      presentandoahora[i].style.background = "#36373a4d";
+   }
+   } catch { }
+   
    var listamano1;
    try{
    //los que levantaron la mano
@@ -454,6 +463,14 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             }
             } catch { }
 
+            try{
+            // X ESTA PRESENTANDO
+            presentandoahora = document.getElementsByClassName('MON6Vd P9KVBf');
+            for(var i = 0; i < presentandoahora.length; i++){
+               presentandoahora[i].style.background = "#36373a4d";
+            }
+            } catch { }
+            
             try{
             //los que levantaron la mano
             listamano1 = document.getElementsByClassName('HeObRc KQZr0e');
