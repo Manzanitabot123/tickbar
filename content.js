@@ -176,6 +176,15 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
       presentandoahora[i].style.background = "#36373a4d";
    }
    } catch { }
+
+   var terminaEn;
+   try{
+   // TERMINA EN X MINUTOS
+   terminaEn = document.getElementsByClassName("ihVAlc EBpPQb VqncK");
+   for(var i = 0; i < terminaEn.length; i++){
+   terminaEn[i].style.backgroundColor="#36373a4d";
+   }
+   } catch { }
    
    var listamano1;
    try{
@@ -377,7 +386,9 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
          if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") === null)
-         {clearInterval(id1)}
+         { 
+           setTimeout(() => clearInterval(id1), 8000)
+         }
 
          //FUNCIONES
           try{
@@ -411,7 +422,12 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             //CAMARA
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = "#3c404336";
             } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
-         
+            
+            try{
+            //MANO
+            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = "#3c404336";
+            } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
+            
             try{
             //PRESENTAR PANTALLA
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.FfiOZe > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
@@ -481,6 +497,14 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                presentandoahora[i].style.background = "#36373a4d";
             }
             } catch { }
+
+            try{
+            // TERMINA EN X MINUTOS
+            terminaEn = document.getElementsByClassName("ihVAlc EBpPQb VqncK");
+            for(var i = 0; i < terminaEn.length; i++){
+            terminaEn[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
             
             try{
             //los que levantaron la mano
@@ -488,6 +512,58 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             for(var i = 0; i < listamano1.length; i++){
             listamano1[i].style.background = "#202124d1";
             }
+            } catch { }
+
+            try{ 
+            //VENTANA DE INFORMACION ADICIONAL
+            ventanaflotanteinfo = document.getElementsByClassName('ghIe8');
+               for(var i = 0; i < ventanaflotanteinfo.length; i++){
+               ventanaflotanteinfo[i].style.background = "black";
+               };
+            } catch { }
+            
+            
+
+            try{
+               //CALIFICACIÓN
+               calificación = document.getElementsByClassName('dQO5xd AkYcJb');
+               for(var i = 0; i < calificación.length; i++){
+               calificación[i].style.background = "#36373a4d";
+               };
+               //AUDIO
+               audiofinal = document.getElementsByClassName('WtCEJc KLHCqc ftRkTe');
+               for(var i = 0; i < audiofinal.length; i++){
+               audiofinal[i].style.background = "#36373a4d";
+               };
+               //VIDEO
+               videofinal = document.getElementsByClassName('WtCEJc KLHCqc ftRkTe KKjvXb');
+               for(var i = 0; i < videofinal.length; i++){
+               videofinal[i].style.background = "#36373a4d";
+               };
+            } catch { }
+
+            try{
+            //VOLVER A PANTALLA PRINCIPAL
+            volverapantalla = document.getElementsByClassName('VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qfvgSe CX8SS ctOmyb');
+            for(var i = 0; i < volverapantalla.length; i++){
+            volverapantalla[i].style.background = "#1a73e82e";
+            };
+            } catch { }
+
+            try{
+            //SELECCIONA EL IDIOMA DE SUBTITULO
+            subtituloconfig = document.getElementsByClassName('VfPpkd-rymPhb r6B9Fd bwNLcf P2Hi5d');
+            for(var i = 0; i < subtituloconfig.length; i++){
+            subtituloconfig[i].style.background = "black";
+            };
+            } catch { }
+
+            try{
+            //SUBTITULOS TRADUCIDOS REACUADRO
+            subtitulostraducidos = document.getElementsByClassName('jEDmvc');
+            for(var i = 0; i < subtitulostraducidos.length; i++){
+            subtitulostraducidos[i].style.background = "#f8f9fa00";
+            };
             } catch { }
 
             //CAMBIAR LOS ICONOS DE CONFIG
@@ -544,6 +620,14 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             for(var i = 0; i < effects.length; i++){
             effects[i].style.backgroundColor="#f1f3f400";
             }
+            } catch { }
+
+            try{
+            //TU CAMARA ESTA APAGADA PARA PONER LOS EFECTOS
+            estaapagada = document.getElementsByClassName('koV58 Zi94Db ACAH7');
+            for(var i = 0; i < estaapagada.length; i++){
+            estaapagada[i].style.background = "#20212480";
+            };
             } catch { }
             
             try{
