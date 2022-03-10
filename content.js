@@ -551,6 +551,14 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             } catch { }
 
             try{
+            //DETENER PRESENTACIÓN PANTALLA COMPLETA
+            detenerpresentación2 = document.getElementsByClassName('VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qfvgSe gLG6V');
+            for(var i = 0; i < detenerpresentación2.length; i++){
+            detenerpresentación2[i].style.background = "#1a73e82e";
+            };
+            } catch { }
+
+            try{
             //SELECCIONA EL IDIOMA DE SUBTITULO
             subtituloconfig = document.getElementsByClassName('VfPpkd-rymPhb r6B9Fd bwNLcf P2Hi5d');
             for(var i = 0; i < subtituloconfig.length; i++){
