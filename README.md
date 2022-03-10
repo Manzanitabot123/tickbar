@@ -7,7 +7,7 @@
 Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 
 ## Descarga 🏹
-<a href="https://drive.google.com/uc?export=download&id=1P_Z60B6wp7xepdm-caRdI4NqluEDmlAy" target="_blank">
+<a href="https://drive.google.com/uc?export=download&id=18sIGXhtIFJSJfj_btFmI4N8zlzUerkdf" target="_blank">
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 
@@ -17,10 +17,17 @@ Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 Corrección de bugs
 Botones para cambiar la opacidad del fondo
 Más opciones para el tiempo de intervalo de la extensión
-Añadir la opción de poder subir archivos
-Automatizar la carga del fondo
+Añadir la opción de poder subir archivos 
 ```
   
+##Screenshots 📸
+
+![](https://media.discordapp.net/attachments/911416705903902731/951317680990863400/unknown.png?width=912&height=493)
+
+![](https://media.discordapp.net/attachments/911416705903902731/951317817649664041/unknown.png?width=917&height=493)
+
+> Capturas de Google Meet
+
 ## Estado 📥
 Funcionando...
 

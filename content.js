@@ -1,3 +1,20 @@
+var xd = setInterval(function() {
+   if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
+   {
+   console.log('ahora si xd');
+   clearInterval(xd);
+   chrome.storage.sync.get('wallpaper2', function (obj) {
+      const defwallpaper = "https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg";
+      var finalwallpaper;
+      if (obj.wallpaper2 !== undefined) {
+         finalwallpaper = obj.wallpaper2
+      } else {
+         finalwallpaper = defwallpaper
+      };
+      changeColor(finalwallpaper);
+  });
+}}, 1000)
+
 chrome.runtime.onMessage.addListener(function (elenlace) {
    if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
    {
@@ -25,7 +42,11 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
 })
 
  function changeColor(elenlacexd){
-    
+   try{
+      var value = elenlacexd;
+   chrome.storage.sync.set({'wallpaper2': value});
+   } catch(error) { console.log(error)}
+
    try{
    document.body.style.backgroundImage = `url(${elenlacexd})`;
    document.body.style.backgroundPosition = "center";
@@ -549,6 +570,26 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                         }
             } catch { }
 
+            //URL A IMAGEN
+            try{
+               var list, index, element, filename;
+             list = document.querySelectorAll(".oIy2qc:last-child");
+             for (index = 0; index < list.length; ++index) {
+                 element = list[index];
+                 filename = element.textContent.split(" ");
+                 function isImage(url3) {
+                  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
+                  }
+                 if (isImage(filename[0]) === true && filename[1]){
+                    var reemplazar = element.textContent.replace(`${filename[0]} `, ` `)
+                    element.innerHTML = `<p>${reemplazar}</p> <a href="${filename[0]}" target="_blank"><img src='${filename[0]}' style='width:300px'>`
+                  } else if (isImage(filename[0]) === true) {
+                    var reemplazar = element.textContent.replace(`${filename[0]}`, ` `)
+                    element.innerHTML = `<a href="${filename[0]}" target="_blank"><img src='${filename[0]}' style='width:300px'>`
+                  } else { }
+                 }
+            } catch { }
+
             try{
             //NOTIFICAR PROBLEMA
             problemanotif = document.getElementsByClassName('g3VIld OFqiSb Up8vH Whe8ub J9Nfi iWO5td');
@@ -645,7 +686,7 @@ function tiempo(){
       var tiempocompleto
       tiempocompleto=document.getElementsByClassName("MQKmmc SudKRc Q4etDd wYNW7d");  // Find the elements
       for(var i = 0; i < tiempocompleto.length; i++){
-      tiempocompleto[i].innerText=`⏲ ${date.toLocaleString()}`;
+      tiempocompleto[i].innerText=`${date.toLocaleString()}`;
       }};
 
 function detenerintervalo(){
@@ -660,3 +701,46 @@ function detenerintervalo(){
       };
 
 // https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg
+
+
+if (window.trustedTypes && window.trustedTypes.createPolicy) {
+   window.trustedTypes.createPolicy('default', {
+     createHTML: (string, sink) => string
+   });
+ }
+
+
+/*
+ var list, index, element, filename;
+ list = document.getElementsByClassName('oIy2qc');
+ for (index = 0; index < list.length; ++index) {
+     element = list[index];
+     filename = element.textContent.split(" ")
+     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}' style='width:300px'>`}
+
+     const text="https://larepublica.pe/resizer/Im3jNnehRq5eu5G6tFky2SebrAQ=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/ZGCXB332FFEGLLWMZJQSCW5KHM.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bundesarchiv_Bild_183-R99621%2C_Heinrich_Himmler.jpg/220px-Bundesarchiv_Bild_183-R99621%2C_Heinrich_Himmler.jpg https://larepublica.pe/resizer/J_OvJSptEd7ObIZRSdMw9kfRdP4=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/PIKOF4HNNJAJ3LE5OK6TE6GSUM.jpg"; const myArray = text.split(" "); console.log(myArray[0])
+
+
+var list, index, element, filename;
+ list = document.querySelectorAll(".oIy2qc:last-child");
+ for (index = 0; index < list.length; ++index) {
+     element = list[index];
+     filename = element.textContent.split(" ")
+     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}' style='width:300px'>`}
+
+try{
+   var list, index, element, filename;
+ list = document.querySelectorAll(".oIy2qc:last-child");
+ for (index = 0; index < list.length; ++index) {
+     element = list[index];
+     filename = element.textContent.split(" ");
+     function isImage(url3) {
+      return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
+      }
+     if(isImage(filename[0]) === true){
+        element.innerHTML = `<a href="${filename[0]}">${filename.textContent.replace(filename[0], '')}</a><img src='${filename[0]}' style='width:300px'><a href="${filename[0]}">${filename[0]}</a>`
+      } else { }
+     }
+} catch { }
+
+*/
