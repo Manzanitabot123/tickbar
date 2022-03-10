@@ -7,7 +7,7 @@
 Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 
 ## Descarga 🏹
-<a href="https://drive.google.com/uc?export=download&id=18sIGXhtIFJSJfj_btFmI4N8zlzUerkdf" target="_blank">
+<a href="https://drive.google.com/uc?export=download&id=1lDaQmh1vGEhOa52tJCChdNImajQCo36q" target="_blank">
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 
