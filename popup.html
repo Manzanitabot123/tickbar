@@ -5,21 +5,66 @@
   <title>Document</title>
   <link rel="stylesheet" href="button.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+		#loader {
+      opacity: 1;
+      -webkit-transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      -ms-transition: opacity 0.5s ease-in-out;
+      -o-transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
+			border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #2684fb;
+      border-right: 16px solid #00a643;
+      border-bottom: 16px solid #ff4d00;
+      border-left: 16px solid #ffba00;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+		}
+    #loader.fade {
+      opacity: 0;
+    }
+		
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		
+		.center {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	</style>
 </head>
 <body>
+  <div id="loader" class="center"></div>
   <div class="container">
     <a href="https://meet.google.com" target="_blank">
-    <img class =“right” title="Google Meet" src="https://media.discordapp.net/attachments/946261332854992917/950598027125608469/icono128.png" alt="Google Meet" style="width:66px">
+    <img class =“right” title="Simple Custom Meet" src="https://media.discordapp.net/attachments/945405660433117198/952294546698547210/320.png" alt="Simple Custom Meet" style="width:200px">
     </a>
-    <h1><font color="#1978ef">SIM</font><font color="#fcbc05">PLE</font><font color="#04a444">ㅤCUS</font><font color="#f94a0c">TOM</font><font color="#f3efe6">ㅤME</font><font color="#04632a">ET</font></h1>
-      <input type="text" name="name" class="question" id="color" required autocomplete="off" />
-      <label for="color"><span>Ingresa el link</span></label>
-    <p style="color:#fa6e6e;font-size:13px">Si el espacio lo dejas en blanco la imagen actual se reestablecerá a "predeterminado" al darle al botón.</p>
-    <button class="button button-success" style="font-size:20px">Cambiar imagen</button>
+    <input type="text" name="name" class="question" id="wallpaperwithurl" required autocomplete="off" />
+    <label for="wallpaperwithurl"><span>Ingresa el link</span></label>
+    <p style="color:#8efca0;font-size:13px">Se reestablecerá a <strong>Predeterminado</strong> si pulsas el botón sin adjuntar ni escribir nada</p>
+    <button id="activar" class="button button-success" id="subirarchivo" style="font-size:20px">Cambiar imagen</button>
     <script src="popup.js"></script>
-    <br/>
-    <div style="color:#c5d5eb;font-size:20px"  id="clock"><script src="content.js"></script></div>
-    <p style="font-size:9px">De: Manzanitabot123 🍎 - Versión: 1.2.1</p>
+    <p>―――――――――――   o   ―――――――――――</p>
+    <input type='file' class="custom-file-input" accept="image/*" style="font-size:20px" value="" title=" "/>
+    <script src="upload.js"></script>
+    <p style="font-size:13px"><u>Imagen actual:</u></p>
+    <a id="wallpaperurl" href="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" target="_blank">
+    <img class =“right” title="Imagen Actual" id="wallpaper" src="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" alt="Imagen Actual" style="height:100px"><script src="getwallpaper.js"></script>
+    </a>  
+    </p>
+    <p style="font-size:9px"><em>De: Manzanitabot123 🍎 - Versión: 1.2.3</em></p>
+    <script src="loading.js"></script>
 </body>
 </html>
 

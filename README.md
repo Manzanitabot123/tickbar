@@ -1,13 +1,11 @@
 <img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Extensión" src="https://media.discordapp.net/attachments/946261332854992917/950598027125608469/icono128.png"> 
 
-# Simple Custom Meet Extension
+# Simple Custom Meet Extension v1.2.3
 
 > Una simple extensión para cambiar el fondo de tu meet y algunos recuadros transparentes...
 
-Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
-
 ## Descarga 🏹
-<a href="https://drive.google.com/uc?export=download&id=1TPSMgeqQ7k9Vt9TosLWMURfJyH1uQ-55" target="_blank">
+<a href="https://drive.google.com/uc?export=download&id=1HEl4t0fujF5qvl_sDe_Aj4jnheUWr9d8" target="_blank">
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 
@@ -17,7 +15,6 @@ Actualmente se encuentra en fase **Beta** por lo que puede contener errores.
 Corrección de bugs
 Botones para cambiar la opacidad del fondo
 Más opciones para el tiempo de intervalo de la extensión
-Añadir la opción de poder subir archivos 
 ```
   
 ##Screenshots 📸

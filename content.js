@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
  function changeColor(elenlacexd){
    try{
       var value = elenlacexd;
-   chrome.storage.sync.set({'wallpaper2': value});
+      chrome.storage.sync.set({'wallpaper2': value});
    } catch(error) { console.log(error)}
 
    try{
@@ -80,12 +80,12 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    try{
    //CAMARA
    document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = "#3c404336";
-   } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
+   } catch { };
 
    try{
    //MANO
    document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = "#3c404336";
-   } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
+   } catch { };
 
    try{
    //PRESENTAR PANTALLA
@@ -185,6 +185,24 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    terminaEn[i].style.backgroundColor="#36373a4d";
    }
    } catch { }
+
+   var terminaEnXs;
+   try{
+   // TERMINA EN X SEGUNDOS
+   terminaEnXs = document.getElementsByClassName("LaJZaf");
+   for(var i = 0; i < terminaEnXs.length; i++){
+   terminaEnXs[i].style.backgroundColor="#36373a4d";
+   }
+   } catch { }
+
+   var grabando;
+   try{
+   //GRABANDO
+   grabando = document.getElementsByClassName("F9AaL mKNb3d");
+   for(var i = 0; i < grabando.length; i++){
+   grabando[i].style.background="#ea43352e";
+   }
+   } catch { }
    
    var listamano1;
    try{
@@ -276,6 +294,33 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    }
    } catch { }
 
+   var error_video;
+   //ERROR 1 DE VIDEO
+   try{
+   error_video = document.getElementsByClassName("google-material-icons VfPpkd-kBDsod VVkv0e");
+   for ( var i = 0; i < error_video.length; i++) {
+   error_video[i].style.background = "black";
+   }
+   } catch { }
+   
+   var error_video2;
+   //ERROR 2 DE VIDEO
+   try{
+   error_video2 = document.getElementsByClassName("google-material-icons VfPpkd-kBDsod lF1xVb");
+   for ( var i = 0; i < error_video2.length; i++) {
+   error_video2[i].style.background = "black";
+   }
+   } catch { }
+
+   var error_frame;
+   //CUADRO DE ERROR DE VIDEO
+   try{
+      error_frame = document.getElementsByClassName('g3VIld vdySc Up8vH J9Nfi iWO5td');
+               for(var i = 0; i < error_frame.length; i++){
+                  error_frame[i].style.background="#202124d1";
+               }
+   } catch { }
+
    var ping2;
    //CUADRO DE PING
    try{
@@ -321,7 +366,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
          //ADMIN CHAT
          chatadmin = document.getElementsByClassName('WAPtFd jE2Fge');
          for(var i = 0; i < chatadmin.length; i++){
-         chatadmin[i].style.background="#f1f3f414";
+         chatadmin[i].style.background="#3c404300";
       }
       } catch { }
 
@@ -421,12 +466,12 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             try{
             //CAMARA
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = "#3c404336";
-            } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
+            } catch { };
             
             try{
             //MANO
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = "#3c404336";
-            } catch {console.log("ERROR AL CAMBIAR LA CAMARA")};
+            } catch { };
             
             try{
             //PRESENTAR PANTALLA
@@ -503,6 +548,22 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             terminaEn = document.getElementsByClassName("ihVAlc EBpPQb VqncK");
             for(var i = 0; i < terminaEn.length; i++){
             terminaEn[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
+
+            try{
+            // TERMINA EN X SEGUNDOS
+            terminaEnXs = document.getElementsByClassName("LaJZaf");
+            for(var i = 0; i < terminaEnXs.length; i++){
+            terminaEnXs[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
+
+            try{
+            //GRABANDO
+            grabando = document.getElementsByClassName("F9AaL mKNb3d");
+            for(var i = 0; i < grabando.length; i++){
+            grabando[i].style.background="#ea43352e";
             }
             } catch { }
             
@@ -653,6 +714,33 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             levantarmano2[i].style.backgroundColor="#202124d1";
             }
             } catch { }
+
+            var error_video;
+            //ERROR 1 DE VIDEO
+            try{
+            error_video = document.getElementsByClassName("google-material-icons VfPpkd-kBDsod VVkv0e");
+            for ( var i = 0; i < error_video.length; i++) {
+            error_video[i].style.background = "black";
+            }
+            } catch { }
+            
+            var error_video2;
+            //ERROR 2 DE VIDEO
+            try{
+            error_video2 = document.getElementsByClassName("google-material-icons VfPpkd-kBDsod lF1xVb");
+            for ( var i = 0; i < error_video2.length; i++) {
+            error_video2[i].style.background = "black";
+            }
+            } catch { }
+
+            var error_frame;
+            //CUADRO DE ERROR DE VIDEO
+            try{
+               error_frame = document.getElementsByClassName('g3VIld vdySc Up8vH J9Nfi iWO5td');
+                        for(var i = 0; i < error_frame.length; i++){
+                           error_frame[i].style.background="#202124d1";
+                        }
+            } catch { }
             
             //CUADRO DE PING
             try{
@@ -705,7 +793,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                   //ADMIN CHAT
                   chatadmin = document.getElementsByClassName('WAPtFd jE2Fge');
                   for(var i = 0; i < chatadmin.length; i++){
-                  chatadmin[i].style.background="#f1f3f414";
+                  chatadmin[i].style.background="#3c404300";
                }
                } catch { }
 
@@ -728,6 +816,15 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                   chat2[i].style.background="#f1f3f414";
                }
                } catch {console.log("ERROR AL CAMBIAR LA VENTANA DE CHAT")};
+
+               try{
+                  //CAMBIAR COLOR DE TEXTO DEL CHAT
+                  var y = document.getElementsByClassName("oIy2qc");
+                  var i;
+                  for (i = 0; i < y.length; i++) {
+                  y[i].style.color = "white";
+                  }
+               } catch { }
 
                try{
                   //DETALLES DELA REUNIÓN
