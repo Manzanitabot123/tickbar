@@ -5,12 +5,12 @@
 > Una simple extensión para cambiar el fondo de tu meet y algunos recuadros transparentes...
 
 ## Descarga 🏹
-<a href="https://drive.google.com/uc?export=download&id=1HEl4t0fujF5qvl_sDe_Aj4jnheUWr9d8" target="_blank">
+<a href="https://drive.google.com/uc?export=download&id=1nEjP9ceQPIMZlUyzAa6QEUojOfgsTV0i" target="_blank">
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 
 ## Proximamente 🌟
-
+No va haber proximas actualizaciones hasta mediados de Febrero :I
 ```javascript
 Corrección de bugs
 Botones para cambiar la opacidad del fondo

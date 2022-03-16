@@ -9,7 +9,10 @@ window.addEventListener('load', function() {
                 try{
                     var value = reader.result;
                     chrome.storage.sync.set({'wallpaper2': value});
-                } catch(error) { console.log(error)}
+                } catch(error) { console.log(error)};
+                chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
+                    chrome.tabs.sendMessage(tabs[0].id, reader.result)
+                  })
             }
             reader.readAsDataURL(file);
         }

@@ -12,7 +12,7 @@ var xd = setInterval(function() {
          finalwallpaper = defwallpaper
       };
       changeColor(finalwallpaper);
-  });
+   });
 }}, 1000)
 
 chrome.runtime.onMessage.addListener(function (elenlace) {
@@ -21,6 +21,9 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    if (elenlace == "") {
       detenerintervalo();
       document.querySelector("#ow3").style.backgroundColor = "#202124";
+   } else if (elenlace.includes("data:image/")) {
+      changeColor(elenlace);
+      console.log("La imagen subida es valida");
    } else { 
       try{
          function isImage(url2) {
@@ -29,7 +32,7 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             console.log(isImage(elenlace))
             if(isImage(elenlace) === true){
                changeColor(elenlace);
-               console.log("La imagen es valida");
+               console.log("El enlace de la imagen es valida");
             } else {
             alert("El enlace de la imagen no es válida D:")
             console.log("La imagen no es valida");}
@@ -886,7 +889,13 @@ function detenerintervalo(){
           
          console.log(id1, killId)
           
-      } catch { }
+      } catch {
+         try{
+         var killId = setTimeout(function() {
+            for (var i = killId; i > 0; i--) clearInterval(i)
+          }, 1);
+         console.log(id1, killId) 
+      } catch { } }
       };
 
 // https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg

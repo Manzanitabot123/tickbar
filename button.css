@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
 body{
-  background: url(/imagenes/fondo.gif);
+  background: url(/imagenes/fondo_1.gif);
   background-position: center;
   color:#fab92d;
   background-color:#1f1f1f;
@@ -75,7 +75,7 @@ button.button-warning:hover {
   color: rgb(0, 0, 0);
 }
 .custom-file-input:hover::before {
-  background-color: #b4d4ff;
+  background-color: #c0ddfd;
 }
 .custom-file-input:active::before {
   background-color: #ffffff;
