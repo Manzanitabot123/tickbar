@@ -8,7 +8,7 @@
 <a href="https://drive.google.com/uc?export=download&id=1ukxtT3Eh2SL-1uFvcT6peB5QrBF55Wcp" target="_blank">
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
-##Instalación ✔️
+## Instalación ✔️
 > PASO 1: Darle click a los tres puntos en la parte superior derecha de tu navegador. y darle click al botón que dice "Más herramientas"
 
 >PASO 2: Darle click al botón que dice "Extensiones"
@@ -27,7 +27,7 @@ Corrección de bugs
 Botones para cambiar la opacidad del fondo
 ```
   
-##Screenshots 📸
+## Screenshots 📸
 
 ![](https://media.discordapp.net/attachments/911416705903902731/951317680990863400/unknown.png?width=912&height=493)
 
