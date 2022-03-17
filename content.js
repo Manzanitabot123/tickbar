@@ -19,8 +19,88 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
    {
    if (elenlace == "") {
+      alert("Debes ingresar un link que termine en: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg")
+   } else if (elenlace.toUpperCase() === "OCULTAR") {
       detenerintervalo();
-      document.querySelector("#ow3").style.backgroundColor = "#202124";
+      off();
+   } else if (elenlace.toUpperCase() === "MOSTRAR") {
+      window.location.reload();
+   } else if (elenlace.toUpperCase() === "HOLA" || elenlace.toUpperCase() === "HI" || elenlace.toUpperCase() === "WENAS" || elenlace.toUpperCase() === "HELLO") {
+      var easterEggs = ["Hola, gracias por usar Simple Google Meet xd", "Un saludo cap@", "Hola :D", "Wenas", "Kon'nichiwa", "Привет", "aloH", "ɐloɥ", "No muchos saludan asi pero igual, que tengas un buen día :D"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "GRACIAS" || elenlace.toUpperCase() === "ARIGATO" || elenlace.toUpperCase() === "THANKS") {
+      var easterEggs = ["gracias a ti cap@", "Gracias por seguirme acompañandote xd", "De nada, mentira, el agradecimiento es más para tí", "Él que debería estar agradceido soy yo no tú", "Arigato Anata e", "Igualmente :D", "XD de nada"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "PUTA" || elenlace.toUpperCase() === "PUTO" || elenlace.toUpperCase() === "BITCH") {
+      var easterEggs = ["q fue", "xd?", "lol", "tu vieja, es broma, no te ofendas...", "Chale, trato de actualizarme seguido, no te molestes conmigo D:"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "LOL") {
+      var easterEggs = ["LOL", "otro easter egg gg xd", "nice", "lol?", "ELE O ELE"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace === "13") {
+      var easterEggs = ["Mientras mas me la mam*s más me crece", "Mientras más me la...", "O_O", "o_O"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "NASHE") {
+      var easterEggs = ["nasheeeeeeee", "q onda pa", "nashe"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "XD" || elenlace.toUpperCase() === "XDD" || elenlace.toUpperCase() === "GG") {
+      var easterEggs = ["XDDDDD", "xd", "gg", "xD", "jijija", "De q te ries we? xd"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "RICARDO" || elenlace.toUpperCase() === "RICARDOCORZ" || elenlace.toUpperCase() === "RICK") {
+      alert('3956 Richland Avenue \n' + 
+      'League City, TX 77573 \n' +
+      'Curious what Henry means? Click here to find out! \n' +
+      '456-44-XXXX \n' +  
+      '29.441726, -94.991684 \n' +
+      '281-338-1381 \n' + 
+      '1 \n' +
+      'July 4, 1968 \n' + 
+      '16 years old \n' + 
+      'Mothimer \n' + 
+      'YuomieNg3ae \n' +  
+      'Mozilla/5.0 AppleWebKit/537.36  Chrome/74.0.3729.131 Safari/537.36 \n' +
+      'Visa \n' + 
+      '4929 3594 8766 3841 \n' +  
+      '10/2025 \n' +  
+      '675 \n' +  
+      '6 0 (182 centimeters) \n' +
+      '(TODO ES FALSO XD)'
+     )
+   } else if (elenlace.toUpperCase() === "OMAR" || elenlace.toUpperCase() === "LOLIS" || elenlace.toUpperCase() === "BLACKRAISON") {
+      var easterEggs = ["¡Que vivan las lolissss!", "Un roblox?", "Arriba las lolis xd"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "MIGUEL" || elenlace.toUpperCase() === "MANZANITA" || elenlace.toUpperCase() === "MAIGUEL") {
+      var easterEggs = ["zzZ", "no sabía q poner aqui xd", "Nice, encontraste un easter egg xd", ":I", "🍎"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "RENZO" || elenlace.toUpperCase() === "TELLO" || elenlace.toUpperCase() === "KRIS") {
+      var easterEggs = ["Patatudo", "asdfghjklñ{", "XD", "¯\\_(ツ)_/¯", "Otro easter egg :D", "pvto el q lo lea"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "JAIRO" || elenlace.toUpperCase() === "DIOS" ) {
+      var easterEggs = ["manzanita» και yair, φιλιούνται! (by Jairo) xd", "¡Viva!", "Jairosayayinpro206XD", "JFSKAGKJAJKSGA"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "YAIR" || elenlace.toUpperCase() === "YAX" || elenlace.toUpperCase() === "NEUTRINO") {
+      var easterEggs = ["otro easter egg :D", "La respuesta está en la ciencia", "¿Sabes qué es Neutrino?", ":["];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "ALEJANDRO" || elenlace.toUpperCase() === "ALE") {
+      var easterEggs = ["Un saludo para tí", "Capazo", "Un papucho xd", "Un easter egg xd"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "JP" || elenlace.toUpperCase() === "JUAN PABLO") {
+      var easterEggs = ["Saludos", "Grande JP", "Yipi", "JP es god", "Vamoooo xd"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
    } else if (elenlace.includes("data:image/")) {
       changeColor(elenlace);
       console.log("La imagen subida es valida");
@@ -30,21 +110,21 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
             }
             console.log(isImage(elenlace))
-            if(isImage(elenlace) === true){
+            if(isImage(elenlace) === true && elenlace.length > 15){
                changeColor(elenlace);
                console.log("El enlace de la imagen es valida");
             } else {
-            alert("El enlace de la imagen no es válida D:")
+            alert("El enlace de la imagen no es válida")
             console.log("La imagen no es valida");}
       } catch { 
-         alert("El enlace de la imagen no es válida D:")
+         alert("El enlace de la imagen no es válida")
          console.log("La imagen no es valida");
       }
    }
    } else {alert("Solo puedes hacer eso dentro de una llamada")}
 })
 
- function changeColor(elenlacexd){
+function changeColor(elenlacexd){
    try{
       var value = elenlacexd;
       chrome.storage.sync.set({'wallpaper2': value});
@@ -161,7 +241,44 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
       presentarpantalla[i].style.backgroundColor="#202124d1";
    }
    } catch { }
+
+   var controlesDeOrganizador;
+   try{
+   // ADMIN CONTROLES DE ORGANIZADOR
+   controlesDeOrganizador = document.getElementsByClassName("TZFSLb ddIcCe MDZuce beUrMb");
+   for(var i = 0; i < controlesDeOrganizador.length; i++){
+   controlesDeOrganizador[i].style.backgroundColor="#202124d1";
+   }
+   } catch { }
    
+   var agregarPersonas;
+   var agregarPersonas2;
+   try{
+   // AGREGAR PERSONAS
+   agregarPersonas = document.getElementsByClassName("g3VIld NJEZld vDc8Ic hFEqNb J9Nfi iWO5td");
+   for(var i = 0; i < agregarPersonas.length; i++){
+   agregarPersonas[i].style.backgroundColor="#202124d1";
+   };
+   agregarPersonas2 = document.getElementsByClassName("duTsYc");
+   for(var i = 0; i < agregarPersonas2.length; i++){
+   agregarPersonas2[i].style.backgroundColor="#36373a4d";
+   }
+   } catch { }
+
+   var welcome1;
+   var welcome2;
+   try{
+   // BIENVENIDO AL MEET
+   welcome1 = document.getElementsByClassName("xTGfdf");
+   for(var i = 0; i < welcome1.length; i++){
+   welcome1[i].style.backgroundColor="#202124d1";
+   }
+   welcome2 = document.getElementsByClassName("gvnMbb");
+   for(var i = 0; i < welcome2.length; i++){
+   welcome2[i].style.backgroundColor="#36373a4d";
+   }
+   } catch { }
+
    var cambiardiseño;
    try{
    //CAMBIAR DISEÑO
@@ -186,6 +303,15 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
    terminaEn = document.getElementsByClassName("ihVAlc EBpPQb VqncK");
    for(var i = 0; i < terminaEn.length; i++){
    terminaEn[i].style.backgroundColor="#36373a4d";
+   }
+   } catch { }
+
+   var terminaEn2;
+   try{
+   // TERMINA EN X MINUTOS 2
+   terminaEn2 = document.getElementsByClassName("ihVAlc VqncK");
+   for(var i = 0; i < terminaEn2.length; i++){
+   terminaEn2[i].style.backgroundColor="#36373a4d";
    }
    } catch { }
 
@@ -333,6 +459,24 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                }
    } catch { }
 
+   var solicitarUnirse;
+   try{
+   // SOLICITACIÓN PARA UNIRSE
+   solicitarUnirse = document.getElementsByClassName("g3VIld T9cDKf vDc8Ic J9Nfi iWO5td");
+   for(var i = 0; i < solicitarUnirse.length; i++){
+   solicitarUnirse[i].style.backgroundColor="#202124d1";
+   }
+   } catch { }
+
+   var opcionesdeusuario;
+   try{
+   // LOS TRES PUNTOS PARA CADA USUARIO
+   opcionesdeusuario = document.getElementsByClassName("JPdR6b e5Emjc RnNTc qjTEB");
+   for(var i = 0; i < opcionesdeusuario.length; i++){
+   opcionesdeusuario[i].style.backgroundColor="#202124d1";
+   }
+   } catch { }
+
    var problemanotif;
    try{
    //NOTIFICAR PROBLEMA
@@ -440,12 +584,13 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
 
          //FUNCIONES
           try{
+
             try{
-            alltext = document.getElementsByTagName("*");
-            for (var i=0, max=alltext.length; i < max; i++) {
-            alltext[i].style.color = "white";
-            }
-            } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
+               alltext = document.getElementsByTagName("*");
+               for (var i=0, max=alltext.length; i < max; i++) {
+               alltext[i].style.color = "white";
+               }
+               } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
 
             try{
             tiempo();
@@ -531,6 +676,38 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             } catch { }
 
             try{
+            // ADMIN CONTROLES DE ORGANIZADOR
+            controlesDeOrganizador = document.getElementsByClassName("TZFSLb ddIcCe MDZuce beUrMb");
+            for(var i = 0; i < controlesDeOrganizador.length; i++){
+            controlesDeOrganizador[i].style.backgroundColor="#202124d1";
+            }
+            } catch { }
+
+            try{
+            // AGREGAR PERSONAS
+            agregarPersonas = document.getElementsByClassName("g3VIld NJEZld vDc8Ic hFEqNb J9Nfi iWO5td");
+            for(var i = 0; i < agregarPersonas.length; i++){
+            agregarPersonas[i].style.backgroundColor="#202124d1";
+            };
+            agregarPersonas2 = document.getElementsByClassName("duTsYc");
+            for(var i = 0; i < agregarPersonas2.length; i++){
+            agregarPersonas2[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
+
+            try{
+            // BIENVENIDO AL MEET
+            welcome1 = document.getElementsByClassName("xTGfdf");
+            for(var i = 0; i < welcome1.length; i++){
+            welcome1[i].style.backgroundColor="#202124d1";
+            }
+            welcome2 = document.getElementsByClassName("gvnMbb");
+            for(var i = 0; i < welcome2.length; i++){
+            welcome2[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
+
+            try{
             //CAMBIAR DISEÑO
             cambiardiseño = document.getElementsByClassName('VfPpkd-P5QLlc');
             for(var i = 0; i < cambiardiseño.length; i++){
@@ -551,6 +728,15 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             terminaEn = document.getElementsByClassName("ihVAlc EBpPQb VqncK");
             for(var i = 0; i < terminaEn.length; i++){
             terminaEn[i].style.backgroundColor="#36373a4d";
+            }
+            } catch { }
+
+            var terminaEn2;
+            try{
+            // TERMINA EN X MINUTOS 2
+            terminaEn2 = document.getElementsByClassName("ihVAlc VqncK");
+            for(var i = 0; i < terminaEn2.length; i++){
+            terminaEn2[i].style.backgroundColor="#36373a4d";
             }
             } catch { }
 
@@ -753,24 +939,59 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
                         }
             } catch { }
 
+            try{
+            // SOLICITACIÓN PARA UNIRSE
+            solicitarUnirse = document.getElementsByClassName("g3VIld T9cDKf vDc8Ic J9Nfi iWO5td");
+            for(var i = 0; i < solicitarUnirse.length; i++){
+            solicitarUnirse[i].style.backgroundColor="#202124d1";
+            }
+            } catch { }
+
+            try{
+            // LOS TRES PUNTOS PARA CADA USUARIO
+            opcionesdeusuario = document.getElementsByClassName("JPdR6b e5Emjc RnNTc qjTEB");
+            for(var i = 0; i < opcionesdeusuario.length; i++){
+            opcionesdeusuario[i].style.backgroundColor="#202124d1";
+            }
+            } catch { }
+
             //URL A IMAGEN
             try{
-               var list, index, element, filename;
-             list = document.querySelectorAll(".oIy2qc:last-child");
-             for (index = 0; index < list.length; ++index) {
-                 element = list[index];
-                 filename = element.textContent.split(" ");
-                 function isImage(url3) {
-                  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
-                  }
-                 if (isImage(filename[0]) === true && filename[1]){
-                    var reemplazar = element.textContent.replace(`${filename[0]} `, ` `)
-                    element.innerHTML = `<p>${reemplazar}</p> <a href="${filename[0]}" target="_blank"><img src='${filename[0]}' style='width:300px'>`
-                  } else if (isImage(filename[0]) === true) {
-                    var reemplazar = element.textContent.replace(`${filename[0]}`, ` `)
-                    element.innerHTML = `<a href="${filename[0]}" target="_blank"><img src='${filename[0]}' style='width:300px'>`
-                  } else { }
-                 }
+                var list, index, element, todoeltexto, detectar, detectar2, reemplazar, reemplazar2, urlRegex;
+                list = document.querySelectorAll(".oIy2qc:last-child");
+                for (index = 0; index < list.length; ++index) {
+                    element = list[index];
+                    todoeltexto = element.textContent;
+                    function isImage(url3) {
+                     return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
+                     };
+                     function detectURLs(todoeltexto2) {
+                     urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+                     return todoeltexto2.match(urlRegex)
+                     };
+                     try{
+                     detectar = detectURLs(todoeltexto)[0];
+                     detectar2 = detectURLs(todoeltexto)[1];
+                     if(isImage(detectar2) === true) {
+                        reemplazar = todoeltexto.replace(`${detectar}`, ``);
+                        reemplazar2 = reemplazar.replace(`${detectar2}`, ``);
+                        function onlySpaces1(strr) {
+                           return strr.trim().length === 0;
+                         }
+                        if(onlySpaces1(reemplazar2) === false){
+                        element.innerHTML = `<p>${reemplazar2}</p> <a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}' style='width:300px'></a>`
+                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}' style='width:300px'></a>`}
+                     } else if(isImage(detectar) === true) {
+                        reemplazar = element.textContent.replace(`${detectar}`, ``);
+                        function onlySpaces2(strr) {
+                           return strr.trim().length === 0;
+                         }
+                        if(onlySpaces2(reemplazar) === false){
+                        element.innerHTML = `<p>${reemplazar}</p> <a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a>`
+                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a></a></a>`}
+                     }  else { }
+                     } catch { }
+                    }
             } catch { }
 
             try{
@@ -870,36 +1091,95 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
             }
             catch{
             console.log("ERROR")
-            }}, 500)
-   }
+            }})
+}
 
 function tiempo(){
-      var date = new Date(); 
+      var options = { weekday: 'long' };
+      var hoy  = new Date();
       var tiempocompleto
       tiempocompleto=document.getElementsByClassName("MQKmmc SudKRc Q4etDd wYNW7d");  // Find the elements
       for(var i = 0; i < tiempocompleto.length; i++){
-      tiempocompleto[i].innerText=`${date.toLocaleString()}`;
+      tiempocompleto[i].innerText=`${hoy.toLocaleDateString("es-ES", options).toUpperCase()} • ${hoy.toLocaleTimeString()}`;
       }};
 
 function detenerintervalo(){
       try{
-         var killId = setTimeout(function() {
-            for (var i = killId; i > 0; i--) clearInterval(i)
-          }, 1);
-          
-         console.log(id1, killId)
+         clearInterval(id1)
           
       } catch {
          try{
-         var killId = setTimeout(function() {
-            for (var i = killId; i > 0; i--) clearInterval(i)
-          }, 1);
-         console.log(id1, killId) 
+            clearInterval(id1)
       } catch { } }
       };
 
 // https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg
 
+function off(){
+   
+   try{
+      document.body.style.backgroundImage = `url("https://www.htmlcsscolor.com/preview/gallery/202124.png")`;
+      } catch {console.log("ERROR AL CAMBIAR LA IMAGEN")};
+      
+      //CAMBIAR EL FONDO DE LOS MAS FONDO
+      try{
+      ventanaiconos = document.getElementsByClassName('SSPGKf p2ZbV DNu0ud');
+      for(var i = 0; i < ventanaiconos.length; i++){
+         ventanaiconos[i].style.backgroundColor="#202124";
+      }
+      } catch { }
+
+      try{
+         alltext = document.getElementsByTagName("*");
+         for (var i=0, max=alltext.length; i < max; i++) {
+         alltext[i].style.color = "";
+         }
+         } catch {console.log("ERROR AL CAMBIAR TODO A LA NORMALIDAD")};
+      try{
+      //BARRA DE ABAJO
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
+   
+      try{
+      //FONDO
+      document.querySelector("#ow3").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR EL FONDO")};
+   
+      try{
+      //MICROFNO
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR EL MICROFONO")};
+   
+      try{
+      //CAMARA
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = '';
+      } catch { };
+   
+      try{
+      //MANO
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = '';
+      } catch { };
+   
+      try{
+      //PRESENTAR PANTALLA
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.FfiOZe > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR LA PRESENTACIÓN DE PANTALLA")};
+   
+      try{
+      //TRES PUNTOS
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.Nsfdxf > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR LAS OPCIONES")};
+   
+      try{
+      //COLGAR
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.NHaLPe.CoOyx > span > button").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR COLGAR")};
+   
+      try{
+      //SUBTITULOS
+      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.TlJx6e > div > span > button").style.backgroundColor = '';
+      } catch {console.log("ERROR AL CAMBIAR LOS SUBTITULOS")};
+}
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
    window.trustedTypes.createPolicy('default', {

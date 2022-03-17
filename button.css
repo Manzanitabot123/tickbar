@@ -29,11 +29,11 @@ img {
 }
 
 
-button.button {
+.button.button {
   cursor: pointer;
   border-radius: 32px;
   padding: 3px 10px;
-  width: 100%;
+  width: 91%;
   height:30px;
   background-color: gray;
   color: white;
@@ -42,18 +42,74 @@ button.button {
   border: 0;
 }
 
-button.button:last-child {
+.button.button:last-child {
   margin-bottom: 0;
 }
 
-button.button-success {
+.button.button-success {
   background-color: #1a73e8;
 }
-button.button-success:hover {
+.button.button-success:hover {
   background-color: #174ea6;
 }
 
-button.button-warning:hover {
+.button.button-warning:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+.button2.button2 {
+  cursor: pointer;
+  border-radius: 32px;
+  padding: 3px 10px;
+  width: 91%;
+  height:30px;
+  background-color: gray;
+  color: white;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  border: 0;
+}
+
+.button2.button2:last-child {
+  margin-bottom: 0;
+}
+
+.button2.button2-success {
+  background-color: #f02106;
+}
+.button2.button2-success:hover {
+  background-color: #8f0707;
+}
+
+.button2.button2-warning:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+.button3.button3 {
+  cursor: pointer;
+  border-radius: 32px;
+  padding: 3px 10px;
+  width: 91%;
+  height:30px;
+  background-color: gray;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  border: 0;
+}
+
+.button3.button3:last-child {
+  margin-bottom: 0;
+}
+
+.button3.button3-success {
+  background-color: #00ff15ad;
+}
+.button3.button3-success:hover {
+  background-color: #0c7a15;
+}
+
+.button3.button3-warning:hover {
   background-color: rgb(63, 62, 62);
 }
 
@@ -61,6 +117,7 @@ button.button-warning:hover {
   visibility: hidden;
 } 
 .custom-file-input::before {
+  width: 91%;
   text-align: center;
   content: 'Subir una imagen';
   display:inline-block;
@@ -75,7 +132,7 @@ button.button-warning:hover {
   color: rgb(0, 0, 0);
 }
 .custom-file-input:hover::before {
-  background-color: #c0ddfd;
+  background-color: #b1b2b3;
 }
 .custom-file-input:active::before {
   background-color: #ffffff;
@@ -134,8 +191,8 @@ textarea.question + label {
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  width: 45%;
-  border-top: 1px solid red;
+  width: 100%;
+  border-top: 1px solid #1a73e8;
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
   height: 0px;
@@ -144,6 +201,7 @@ textarea.question + label {
 input.question:focus + label,
 textarea.question:focus + label {
   width: 100%;
+  border-top: 1px solid red;
 }
 
 input.question:focus,
@@ -172,7 +230,7 @@ textarea.question:valid + label > span {
 
 input.question:valid + label,
 textarea.question:valid + label {
-  border-color: green;
+  border-color: #00eb00;
 }
 
 input.question:invalid,
