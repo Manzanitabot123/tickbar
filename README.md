@@ -9,7 +9,7 @@
 <img class =“right” title="Descargalo haciendo click aquí" src="https://unmediodigital.com/wp-content/uploads/2022/01/Descargar-APK.png" alt="CLICK"></a></img>
 
 ## Instalación ✔️
-> PASO 1️⃣ - Darle click a los tres puntos en la parte superior derecha de tu navegador. y darle click al botón que dice "Más herramientas"
+>PASO 1️⃣ - Darle click a los tres puntos en la parte superior derecha de tu navegador. y darle click al botón que dice "Más herramientas"
 
 >PASO 2️⃣ - Darle click al botón que dice "Extensiones"
 
