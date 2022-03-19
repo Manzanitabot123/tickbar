@@ -151,8 +151,19 @@ function changeColor(elenlacexd){
    } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
 
    try{
-   //FONDO
-   document.querySelector("#ow3").style.backgroundColor = "#202124";
+   //FONDO Y OPACIDAD
+   chrome.storage.sync.get('opacidad2', function (obj) {
+      const defopacidad = 50;
+      var finalopacidad;
+      if (obj.opacidad2 !== undefined) {
+         finalopacidad = obj.opacidad2
+      } else {
+         finalopacidad = defopacidad
+      };
+      try{
+      document.querySelector("#ow3").style.backgroundColor = `rgba(32, 33, 36, ${finalopacidad/100})`;
+      } catch { }
+   });
    } catch {console.log("ERROR AL CAMBIAR EL FONDO")};
 
    try{
@@ -192,12 +203,23 @@ function changeColor(elenlacexd){
 
    var elements;
    try{
-      // FOTOS
-   elements= document.querySelectorAll(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db");
-   for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = "#36373a4d";
-      }
-   } catch {console.log("ERROR AL CAMBIAR LAS FOTOS")};
+   //FONDO Y OPACIDAD 2 PARA LAS FOTOS
+   chrome.storage.sync.get('opacidad4', function (obj) {
+      const defopacidad4 = 30;
+      var finalopacidad4;
+      if (obj.opacidad4 !== undefined) {
+         finalopacidad4 = obj.opacidad4
+      } else {
+         finalopacidad4 = defopacidad4
+      };
+      try {
+         elements= document.querySelectorAll(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db");
+         for (var i = 0; i < elements.length; i++) {
+         elements[i].style.backgroundColor = `rgba(54, 55, 58, ${finalopacidad4/100})`;
+         } 
+      } catch { }
+   });
+   } catch { };
 
    var message;
    try{
@@ -574,6 +596,47 @@ function changeColor(elenlacexd){
       }
       } catch {console.log("ERROR AL CAMBIAR LA VENTANA DE INFO")};
    } catch {console.log("ERROR AL CAMBIAR EL FONDO DE MENSAJERIA")};
+
+   var id2 = setInterval(function() {
+      if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") === null)
+         { 
+           setTimeout(() => clearInterval(id2), 8000)
+         }
+      try{
+            //FONDO Y OPACIDAD
+            chrome.storage.sync.get('opacidad2', function (obj) {
+               const defopacidad = 50;
+               var finalopacidad;
+               if (obj.opacidad2 !== undefined) {
+                  finalopacidad = obj.opacidad2
+               } else {
+                  finalopacidad = defopacidad
+               };
+               try{
+               document.querySelector("#ow3").style.backgroundColor = `rgba(32, 33, 36, ${finalopacidad/100})`;
+               } catch { }
+            });
+            } catch { };
+
+      try{
+            //FONDO Y OPACIDAD 2 PARA LAS FOTOS
+            chrome.storage.sync.get('opacidad4', function (obj) {
+               const defopacidad4 = 30;
+               var finalopacidad4;
+               if (obj.opacidad4 !== undefined) {
+                  finalopacidad4 = obj.opacidad4
+               } else {
+                  finalopacidad4 = defopacidad4
+               };
+               try {
+                  elements= document.querySelectorAll(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db");
+                  for (var i = 0; i < elements.length; i++) {
+                  elements[i].style.backgroundColor = `rgba(54, 55, 58, ${finalopacidad4/100})`;
+                  } 
+               } catch { }
+            });
+            } catch { };
+      }, 1500)
          // document.querySelector(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db").style.background = "#36373a45"
    var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
@@ -601,10 +664,6 @@ function changeColor(elenlacexd){
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = "#20212400";
             } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
          
-            try{
-            //FONDO
-            document.querySelector("#ow3").style.backgroundColor = "#2021247d";
-            } catch {console.log("ERROR AL CAMBIAR EL FONDO")};
          
             try{
             //MICROFNO
@@ -631,13 +690,6 @@ function changeColor(elenlacexd){
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.Nsfdxf > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
             } catch {console.log("ERROR AL CAMBIAR LAS OPCIONES")};
 
-            try{
-               //FOTOS
-            elements= document.querySelectorAll(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db");
-            for (var i = 0; i < elements.length; i++) {
-               elements[i].style.backgroundColor = "#36373a4d";
-               }
-            } catch {console.log("ERROR AL CAMBIAR LAS FOTOS")};
             try{
                //MENSAJERIA
                message = document.getElementsByClassName('R3Gmyc qwU8Me');

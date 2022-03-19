@@ -5,6 +5,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="button.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
   <style>
 		#loader {
       opacity: 1;
@@ -50,27 +51,35 @@
     <a href="https://meet.google.com" target="_blank">
     <img class =“right” title="Simple Custom Meet" src="https://media.discordapp.net/attachments/945405660433117198/952294546698547210/320.png" alt="Simple Custom Meet" style="width:200px">
     </a>
-    <p>© 2022</p>
+    <p style="font-size:10px">© 2022</p>
     <input type="text" name="name" class="question" id="wallpaperwithurl" required autocomplete="off" />
-    <label class="xddd" for="wallpaperwithurl"><span>Ingresa el link</span></label>
+    <label class="xddd" for="wallpaperwithurl"><span><div class="blink_me"><i class='fas fa-link'></i> Ingresa el link</div></span></label>
     <p></p>
-    <button id="activar" class="button button-success" style="font-size:20px">Cambiar imagen</button>
+    <button id="activar" class="button button-success" style="font-size:20px"><i class='fas fa-edit'></i>  Cambiar imagen</button>
     <script src="popup.js"></script>
-    <p>―  o  ―</p>
     <input type='file' class="custom-file-input" accept="image/*" style="font-size:20px" value="" title=" "/>
     <script src="upload.js"></script>
-    <p style="font-size:13px"><u>Imagen actual:</u></p>
+    <div>
+    <i class='fas fa-image fa-lg' style="color:#f3f3f3;" ></i>
+    <input id="rangoopacidad" type="range" value="50" min="0" max="100" />
+    <output id="rangevalue">50</output>
+    </div>
+    <div>
+    <i class='fas fa-user-circle fa-lg' style="color:#f3f3f3;"></i>
+    <input id="rangoopacidad2" type="range" value="50" min="0" max="100" />
+    <output id="rangevalue2">50</output>
+    </div>
+    <script src="opacity.js"></script>
     <a id="wallpaperurl" href="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" target="_blank">
     <img class =“right” title="Imagen Actual" id="wallpaper" src="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" alt="Imagen Actual" style="height:100px"><script src="getwallpaper.js"></script>
-    </a>  
-    </p>
-    <button id="restablecer" class="button2 button2-success" style="font-size:20px">Ocultar fondo</button>
+    </a>
+    <p style="font-size:8px"></p>
+    <button id="restablecer" class="button2 button2-success" style="font-size:20px"><div class="blink_me"><i class='fas fa-eye-slash'></i> Ocultar fondo</div></button>
     <script src="restablecer.js"></script>
-    <button id="mostrar" class="button3 button3-success" style="font-size:20px">Mostrar fondo</button>
+    <p style="font-size:10px"></p>
+    <button id="mostrar" class="button3 button3-success" style="font-size:20px"><div class="blink_me"><i class='fas fa-eye'></i> Mostrar fondo</div></button>
     <script src="mostrar.js"></script>
-    <p style="font-size:9px"><em>De: Manzanitabot123 🍎 - Versión: 1.3.0</em></p>
+    <p style="font-size:9px"><em>Por: Manzanitabot123 🍎 - Versión: 1.3.1</em></p>
     <script src="loading.js"></script>
-    
 </body>
 </html>
-

@@ -11,7 +11,7 @@ window.setInterval( function(){
   } else if (wallpaperurlxd == "") {
     var xddd2 = document.getElementsByClassName("xddd");
     for(var i = 0; i < xddd2.length; i++){
-    xddd2[i].style.borderTop = "1px solid #1a73e8";
+    xddd2[i].style.borderTop = "";
     }
   } else {
     var xddd = document.getElementsByClassName("xddd");
