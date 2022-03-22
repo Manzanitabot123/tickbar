@@ -9,11 +9,13 @@ window.setInterval( function(){
       xddd1[i].style.borderTop = "1px solid #00eb00";
       }
   } else if (wallpaperurlxd == "") {
+    document.querySelector("body > div.container > p:nth-child(21) > em").style.visibility = "visible"
     var xddd2 = document.getElementsByClassName("xddd");
     for(var i = 0; i < xddd2.length; i++){
     xddd2[i].style.borderTop = "";
     }
   } else {
+    document.querySelector("body > div.container > p:nth-child(21) > em").style.visibility = "hidden"
     var xddd = document.getElementsByClassName("xddd");
       for(var i = 0; i < xddd.length; i++){
       xddd[i].style.borderTop = "1px solid red";

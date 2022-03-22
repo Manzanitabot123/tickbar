@@ -45,3 +45,27 @@ function handleInputChange2(e) {
     } catch(error) { console.log(error)}
   } else { }
 }
+
+document.getElementById('rangoopacidad3').addEventListener('input', handleInputChange3)
+
+function handleInputChange3(e) {
+  if(document.getElementById('rangoopacidad3').value !== document.getElementById('rangevalue3').value) {
+    let target = e.target
+    if (e.target.type !== 'range') {
+      target = document.getElementById('range')
+    } 
+    const min = target.min
+    const max = target.max
+    const val3 = target.value
+    const roundToHundredth3 = (value) => {
+      return Number(value.toFixed());
+    };
+    const opacidadFinal4 = roundToHundredth3(val3*1);
+    document.getElementById('rangevalue3').value=val3; 
+    
+    try{
+      var value = opacidadFinal4;
+      chrome.storage.sync.set({'opacidad8': value});
+    } catch(error) { console.log(error)}
+  } else { }
+}

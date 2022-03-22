@@ -1,3 +1,43 @@
+const el = document.body;
+
+var x = null;
+var y = null;
+    
+document.addEventListener('mousemove', onMouseUpdate, false);
+document.addEventListener('mouseenter', onMouseUpdate, false);
+
+var finalopacidad8;
+chrome.storage.sync.get('opacidad8', function (obj) {
+   const defopacidad8 = 25;
+   if (obj.opacidad8 !== undefined) {
+      finalopacidad8 = obj.opacidad8
+   } else {
+      finalopacidad8 = defopacidad8
+   };
+   return finalopacidad8;
+});
+
+setInterval(function() {
+   try{
+   chrome.storage.sync.get('opacidad8', function (obj) {
+      const defopacidad8 = 25;
+      if (obj.opacidad8 !== undefined) {
+         finalopacidad8 = obj.opacidad8
+      } else {
+         finalopacidad8 = defopacidad8
+      };
+      return finalopacidad8;
+   });
+   } catch { }
+},1555)
+
+function onMouseUpdate(e) {
+  x = e.pageX;
+  y = e.pageY;
+  el.style.backgroundPositionX = -x*(finalopacidad8/2500) + "px";
+  el.style.backgroundPositionY = -y*(finalopacidad8/2500) + "px";
+}
+
 var xd = setInterval(function() {
    if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
    {
@@ -77,6 +117,10 @@ chrome.runtime.onMessage.addListener(function (elenlace) {
       var easterEggs = ["¡Que vivan las lolissss!", "Un roblox?", "Arriba las lolis xd"];
       var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
       alert(easterEggs[númeroDeEG])
+   } else if (elenlace.toUpperCase() === "GONZALO" || elenlace.toUpperCase() === "GONZZZ" || elenlace.toUpperCase() === "GONZA") {
+      var easterEggs = ["Sigue asi, Gonza", "Gracias Gonzalo...", "Un maestro", "LOL", "Gonza capo"];
+      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
+      alert(easterEggs[númeroDeEG])
    } else if (elenlace.toUpperCase() === "MIGUEL" || elenlace.toUpperCase() === "MANZANITA" || elenlace.toUpperCase() === "MAIGUEL") {
       var easterEggs = ["zzZ", "no sabía q poner aqui xd", "Nice, encontraste un easter egg xd", ":I", "🍎"];
       var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
@@ -132,8 +176,11 @@ function changeColor(elenlacexd){
 
    try{
    document.body.style.backgroundImage = `url(${elenlacexd})`;
+   /*
    document.body.style.backgroundPosition = "center";
-   document.body.style.backgroundSize = "cover";
+   */
+   document.body.style.backgroundSize = "104% 104%";
+   
    } catch {console.log("ERROR AL CAMBIAR LA IMAGEN")};
 
    //todo las letras
@@ -409,6 +456,14 @@ function changeColor(elenlacexd){
    }
    } catch { }
    
+   //ESTAS HABLANDO?
+   try{
+   estasHablando = document.getElementsByClassName('MvD9Jd ncMv2e');
+   for(var i = 0; i < estasHablando.length; i++){
+      estasHablando[i].style.color="#f1f3f41a";
+   }
+   } catch { }
+
    var country2;
    try{
    //SELECCIONAR PAIS
@@ -636,7 +691,7 @@ function changeColor(elenlacexd){
                } catch { }
             });
             } catch { };
-      }, 1500)
+      }, 1555)
          // document.querySelector(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db").style.background = "#36373a45"
    var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
@@ -1168,18 +1223,14 @@ function detenerintervalo(){
 // https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg
 
 function off(){
-   
    try{
-      document.body.style.backgroundImage = `url("https://www.htmlcsscolor.com/preview/gallery/202124.png")`;
+      document.body.style.backgroundImage = `url("https://www.schemecolor.com/images/color-image-thumb.php?tx&w=600&h=316&hex=202124")`;
+      /*
+      document.body.style.backgroundPosition= "center";
+      */
+      document.body.style.backgroundRepeat= "no-repeat";
+      document.body.style.backgroundSize= "160%";
       } catch {console.log("ERROR AL CAMBIAR LA IMAGEN")};
-      
-      //CAMBIAR EL FONDO DE LOS MAS FONDO
-      try{
-      ventanaiconos = document.getElementsByClassName('SSPGKf p2ZbV DNu0ud');
-      for(var i = 0; i < ventanaiconos.length; i++){
-         ventanaiconos[i].style.backgroundColor="#202124";
-      }
-      } catch { }
 
       try{
          alltext = document.getElementsByTagName("*");

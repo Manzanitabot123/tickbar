@@ -11,6 +11,11 @@ body{
   align-items: center;
   
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 .container {
   text-align: center;
   width: 300px;
@@ -285,7 +290,17 @@ input.question:focus + label > span,
 input.question:valid + label > span {
   top: -63px;
   font-size: 18px;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 166, 0);
+  display:block;
+  font-family: monospace;
+  border-right: 0px solid;
+  width: 18ch;
+  animation: typing 2s steps(12);
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0}
 }
 
 textarea.question:focus + label > span,
@@ -296,9 +311,11 @@ textarea.question:valid + label > span {
 }
 
 input.question:valid + label,
+/*
 textarea.question:valid + label {
   border-color: #00eb00;
 }
+*/
 
 input.question:invalid,
 textarea.question:invalid {
