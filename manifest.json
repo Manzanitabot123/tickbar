@@ -1,7 +1,7 @@
 {
   "name": "Simple Custom Meet",
-  "version": "1.4.0",
-  "description": "Personaliza los colores y el fondo de tu Meet",
+  "version": "1.4.1",
+  "description": "__MSG_application_description__",
   "manifest_version": 2,
   "author": "Manzanitabot123",
   "permissions": ["storage", "activeTab"],
@@ -13,7 +13,7 @@
     }
   ],
   "browser_action": {
-    "default_title": "Personaliza tu Google Meet :D",
+    "default_title": "__MSG_application_title__",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "/png/icono16.png",
@@ -22,6 +22,7 @@
       "128": "/png/icono128.png"
     }
   },
+  "default_locale": "en",
   "icons": {
     "16": "/png/icono16.png",
     "32": "/png/icono64.png",

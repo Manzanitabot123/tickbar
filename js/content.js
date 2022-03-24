@@ -29,7 +29,7 @@ setInterval(function() {
       return finalopacidad8;
    });
    } catch { }
-},1555)
+},1234)
 
 function onMouseUpdate(e) {
   x = e.pageX;
@@ -38,10 +38,79 @@ function onMouseUpdate(e) {
   el.style.backgroundPositionY = -y*(finalopacidad8/2500) + "px";
 }
 
-var xd = setInterval(function() {
-   if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
+if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != undefined) || (document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != null))
    {
-   console.log('ahora si xd');
+      //------------------------------------THANK YOU FOR USING SIMPLE CUSTOM MEET-------------------------------------------------
+
+      //TODO A BLANCO
+      var alltexto;
+      try{
+      alltexto = document.getElementsByTagName("*");
+      for (var i=0, max=alltexto.length; i < max; i++) {
+      alltexto[i].style.color = "white";
+      }
+      } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
+
+      try{
+      //AÑADIR EL FONDO
+      chrome.storage.sync.get('wallpaper2', function (obj) {
+         const defwallpaper = "https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg";
+         var finalwallpaper;
+         if (obj.wallpaper2 !== undefined) {
+            finalwallpaper = obj.wallpaper2
+         } else {
+            finalwallpaper = defwallpaper
+         };
+         document.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${finalwallpaper})`;
+         document.body.style.backgroundSize = "104% 104%";
+      });
+      } catch { }
+      
+      var fondoarriba;
+      try{
+      //FONDO DE ARRIBA
+      fondoarriba = document.getElementsByClassName('gb_na gb_Za gb_Oe gb_Kc');
+                  for(var i = 0; i < fondoarriba.length; i++){
+                     fondoarriba[i].style.backgroundColor="#ffffff00";
+         }
+      } catch { }
+
+      var recuadroscambiantes;
+      try{
+      //RECUADROS QUE CAMBIAN
+      recuadroscambiantes = document.getElementsByClassName('VdLOD yUoCvf fXx9Lc JxfZTd');
+                  for(var i = 0; i < recuadroscambiantes.length; i++){
+                     recuadroscambiantes[i].style.backgroundColor="#ffffff00";
+                  }
+      } catch { }
+
+      var reunionesproximas;
+      var reunionesproximas2;
+      try{
+      //REUNIONES QUE SIGUEN
+      reunionesproximas = document.getElementsByClassName('VdLOD yUoCvf JxfZTd');
+                  for(var i = 0; i < reunionesproximas.length; i++){
+                     reunionesproximas[i].style.backgroundColor="#ffffff00";
+                  }
+      reunionesproximas2 = document.getElementsByClassName('mtr0Je');
+                  for(var i = 0; i < reunionesproximas2.length; i++){
+                     reunionesproximas2[i].style.backgroundColor="#ffffff00";
+                  }
+      } catch { }
+
+      var menuparacrearllamada;
+      try{
+      //MENU PARA CREAR LLAMADA
+      menuparacrearllamada = document.getElementsByClassName('VfPpkd-StrnGf-rymPhb DMZ54e');
+                  for(var i = 0; i < menuparacrearllamada.length; i++){
+                     menuparacrearllamada[i].style.backgroundColor="black";
+                  }
+      } catch { }
+}
+var xd = setInterval(function() {
+   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != null))
+   {
+   console.log('Nice!');
    clearInterval(xd);
    chrome.storage.sync.get('wallpaper2', function (obj) {
       const defwallpaper = "https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg";
@@ -56,116 +125,48 @@ var xd = setInterval(function() {
 }}, 1000)
 
 chrome.runtime.onMessage.addListener(function (elenlace) {
-   if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") != null)
+   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != null))
    {
    if (elenlace == "") {
-      alert("Debes ingresar un link que termine en: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg")
-   } else if (elenlace.toUpperCase() === "OCULTAR") {
+      const missingURL = chrome.i18n.getMessage("missing_text");
+      alert(missingURL)
+   } else if (elenlace.toUpperCase() === "HIDE" || elenlace.toUpperCase() === "OCULTAR") {
       detenerintervalo();
       off();
-   } else if (elenlace.toUpperCase() === "MOSTRAR") {
+   } else if (elenlace.toUpperCase() === "REFRESH" || elenlace.toUpperCase() === "RESTART" || elenlace.toUpperCase() === "REFRESCAR") {
       window.location.reload();
-   } else if (elenlace.toUpperCase() === "HOLA" || elenlace.toUpperCase() === "HI" || elenlace.toUpperCase() === "WENAS" || elenlace.toUpperCase() === "HELLO") {
-      var easterEggs = ["Hola, gracias por usar Simple Google Meet xd", "Un saludo cap@", "Hola :D", "Wenas", "Kon'nichiwa", "Привет", "aloH", "ɐloɥ", "No muchos saludan asi pero igual, que tengas un buen día :D"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "GRACIAS" || elenlace.toUpperCase() === "ARIGATO" || elenlace.toUpperCase() === "THANKS") {
-      var easterEggs = ["gracias a ti cap@", "Gracias por seguirme acompañandote xd", "De nada, mentira, el agradecimiento es más para tí", "Él que debería estar agradceido soy yo no tú", "Arigato Anata e", "Igualmente :D", "XD de nada"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "PUTA" || elenlace.toUpperCase() === "PUTO" || elenlace.toUpperCase() === "BITCH") {
-      var easterEggs = ["q fue", "xd?", "lol", "tu vieja, es broma, no te ofendas...", "Chale, trato de actualizarme seguido, no te molestes conmigo D:"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "LOL") {
-      var easterEggs = ["LOL", "otro easter egg gg xd", "nice", "lol?", "ELE O ELE"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace === "13") {
-      var easterEggs = ["Mientras mas me la mam*s más me crece", "Mientras más me la...", "O_O", "o_O"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "NASHE") {
-      var easterEggs = ["nasheeeeeeee", "q onda pa", "nashe"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "XD" || elenlace.toUpperCase() === "XDD" || elenlace.toUpperCase() === "GG") {
-      var easterEggs = ["XDDDDD", "xd", "gg", "xD", "jijija", "De q te ries we? xd"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "RICARDO" || elenlace.toUpperCase() === "RICARDOCORZ" || elenlace.toUpperCase() === "RICK") {
-      alert('3956 Richland Avenue \n' + 
-      'League City, TX 77573 \n' +
-      'Curious what Henry means? Click here to find out! \n' +
-      '456-44-XXXX \n' +  
-      '29.441726, -94.991684 \n' +
-      '281-338-1381 \n' + 
-      '1 \n' +
-      'July 4, 1968 \n' + 
-      '16 years old \n' + 
-      'Mothimer \n' + 
-      'YuomieNg3ae \n' +  
-      'Mozilla/5.0 AppleWebKit/537.36  Chrome/74.0.3729.131 Safari/537.36 \n' +
-      'Visa \n' + 
-      '4929 3594 8766 3841 \n' +  
-      '10/2025 \n' +  
-      '675 \n' +  
-      '6 0 (182 centimeters) \n' +
-      '(TODO ES FALSO XD)'
-     )
-   } else if (elenlace.toUpperCase() === "OMAR" || elenlace.toUpperCase() === "LOLIS" || elenlace.toUpperCase() === "BLACKRAISON") {
-      var easterEggs = ["¡Que vivan las lolissss!", "Un roblox?", "Arriba las lolis xd"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "GONZALO" || elenlace.toUpperCase() === "GONZZZ" || elenlace.toUpperCase() === "GONZA") {
-      var easterEggs = ["Sigue asi, Gonza", "Gracias Gonzalo...", "Un maestro", "LOL", "Gonza capo"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "MIGUEL" || elenlace.toUpperCase() === "MANZANITA" || elenlace.toUpperCase() === "MAIGUEL") {
-      var easterEggs = ["zzZ", "no sabía q poner aqui xd", "Nice, encontraste un easter egg xd", ":I", "🍎"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "RENZO" || elenlace.toUpperCase() === "TELLO" || elenlace.toUpperCase() === "KRIS") {
-      var easterEggs = ["Patatudo", "asdfghjklñ{", "XD", "¯\\_(ツ)_/¯", "Otro easter egg :D", "pvto el q lo lea"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "JAIRO" || elenlace.toUpperCase() === "DIOS" ) {
-      var easterEggs = ["manzanita» και yair, φιλιούνται! (by Jairo) xd", "¡Viva!", "Jairosayayinpro206XD", "JFSKAGKJAJKSGA"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "YAIR" || elenlace.toUpperCase() === "YAX" || elenlace.toUpperCase() === "NEUTRINO") {
-      var easterEggs = ["otro easter egg :D", "La respuesta está en la ciencia", "¿Sabes qué es Neutrino?", ":["];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "ALEJANDRO" || elenlace.toUpperCase() === "ALE") {
-      var easterEggs = ["Un saludo para tí", "Capazo", "Un papucho xd", "Un easter egg xd"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
-   } else if (elenlace.toUpperCase() === "JP" || elenlace.toUpperCase() === "JUAN PABLO") {
-      var easterEggs = ["Saludos", "Grande JP", "Yipi", "JP es god", "Vamoooo xd"];
-      var númeroDeEG = Math.floor((Math.random() * easterEggs.length)); 
-      alert(easterEggs[númeroDeEG])
    } else if (elenlace.includes("data:image/")) {
       changeColor(elenlace);
-      console.log("La imagen subida es valida");
+      console.log("IS VALID");
    } else { 
       try{
          function isImage(url2) {
-               return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
+            if (typeof url2 !== 'string') {
+               return false;
+            }
+            return (url2.match(/^http[^\?]*.(jpg|jpeg|svg|gif|webp|avif|png|tiff|bmp)(\?(.*))?$/gmi) !== null);
+            /*
+            return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
+            */
             }
             console.log(isImage(elenlace))
             if(isImage(elenlace) === true && elenlace.length > 15){
                changeColor(elenlace);
-               console.log("El enlace de la imagen es valida");
+               console.log("IS VALID");
             } else {
-            alert("El enlace de la imagen no es válida")
-            console.log("La imagen no es valida");}
+            const invalidURL = chrome.i18n.getMessage("invalid_text");
+            alert(invalidURL)
+            console.log("IS NOT VALID");}
       } catch { 
-         alert("El enlace de la imagen no es válida")
-         console.log("La imagen no es valida");
+         const invalidURL2 = chrome.i18n.getMessage("invalid_text");
+         alert(invalidURL2)
+         console.log("IS NOT VALID");
       }
    }
-   } else {alert("Solo puedes hacer eso dentro de una llamada")}
+   } else {
+   const pageDenied = chrome.i18n.getMessage("page_denied");
+   alert(pageDenied)
+   }
 })
 
 function changeColor(elenlacexd){
@@ -192,9 +193,13 @@ function changeColor(elenlacexd){
    }
    } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
    
+   var barradeabajo;
    try{
    //BARRA DE ABAJO
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = "#20212400";
+   barradeabajo = document.getElementsByClassName('UnvNgf Sdwpn  P9KVBf');
+   for(var i = 0; i < barradeabajo.length; i++){
+      barradeabajo[i].style.backgroundColor="#20212400";
+   }
    } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
 
    try{
@@ -213,34 +218,56 @@ function changeColor(elenlacexd){
    });
    } catch {console.log("ERROR AL CAMBIAR EL FONDO")};
 
+   var microfono;
    try{
    //MICROFNO
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button").style.backgroundColor = "#3c404336";
+   microfono = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c uaILN JxICCe CdgDHf FTMc0c N2RpBe jY9Dbb');
+   for(var i = 0; i < microfono.length; i++){
+      microfono[i].style.backgroundColor="#3c404336";
+   }
    } catch {console.log("ERROR AL CAMBIAR EL MICROFONO")};
 
+   var camara;
    try{
    //CAMARA
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = "#3c404336";
+   camara = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c uaILN JxICCe nJcgFc FTMc0c N2RpBe jY9Dbb');
+   for(var i = 0; i < camara.length; i++){
+      camara[i].style.backgroundColor="#3c404336";
+   }
    } catch { };
-
+   
+   var mano;
    try{
    //MANO
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = "#3c404336";
+   mano = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe fzRBVc tmJved xHd4Cb rmHNDe moJB3b');
+   for(var i = 0; i < mano.length; i++){
+      mano[i].style.backgroundColor="#3c404336";
+   }
    } catch { };
-
+   
+   var presentar;
    try{
-   //PRESENTAR PANTALLA
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.FfiOZe > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
+   //PRESENTAR PANTALLA Y TRES PUNTOS
+   presentar = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c  uaILN');
+   for(var i = 0; i < presentar.length; i++){
+      presentar[i].style.backgroundColor="#3c404336";
+   }
    } catch {console.log("ERROR AL CAMBIAR LA PRESENTACIÓN DE PANTALLA")};
 
+   /*
    try{
    //TRES PUNTOS
    document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.Nsfdxf > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
    } catch {console.log("ERROR AL CAMBIAR LAS OPCIONES")};
+   */
 
+   var colgar;
    try{
    //COLGAR
-   document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.NHaLPe.CoOyx > span > button").style.backgroundColor = "#ea43352e";
+   colgar = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c  jh0Tpd Gt6sbf QQrMi NKaD6');
+   for(var i = 0; i < colgar.length; i++){
+      colgar[i].style.backgroundColor="#ea43352e";
+   }
    } catch {console.log("ERROR AL CAMBIAR COLGAR")};
 
    try{
@@ -399,6 +426,15 @@ function changeColor(elenlacexd){
    grabando = document.getElementsByClassName("F9AaL mKNb3d");
    for(var i = 0; i < grabando.length; i++){
    grabando[i].style.background="#ea43352e";
+   }
+   } catch { }
+
+   var grabando2;
+   try{
+   //CARGANDO GRABACIÓN
+   grabando2 = document.getElementsByClassName('F9AaL B8OGLd');
+   for(var i = 0; i < grabando2.length; i++){
+      grabando2[i].style.backgroundColor="#ffffff00";
    }
    } catch { }
    
@@ -653,7 +689,7 @@ function changeColor(elenlacexd){
    } catch {console.log("ERROR AL CAMBIAR EL FONDO DE MENSAJERIA")};
 
    var id2 = setInterval(function() {
-      if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") === null)
+      if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === null))
          { 
            setTimeout(() => clearInterval(id2), 8000)
          }
@@ -691,11 +727,11 @@ function changeColor(elenlacexd){
                } catch { }
             });
             } catch { };
-      }, 1555)
+      }, 1234)
          // document.querySelector(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db").style.background = "#36373a45"
    var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
-         if (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") !== 'undefined' && document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button") === null)
+         if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === null))
          { 
            setTimeout(() => clearInterval(id1), 8000)
          }
@@ -716,34 +752,51 @@ function changeColor(elenlacexd){
 
             try{
             //BARRA DE ABAJO
-            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = "#20212400";
+            barradeabajo = document.getElementsByClassName('UnvNgf Sdwpn  P9KVBf');
+            for(var i = 0; i < barradeabajo.length; i++){
+               barradeabajo[i].style.backgroundColor="#20212400";
+            }
             } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
          
          
             try{
             //MICROFNO
-            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button").style.backgroundColor = "#3c404336";
+            microfono = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c uaILN JxICCe CdgDHf FTMc0c N2RpBe jY9Dbb');
+            for(var i = 0; i < microfono.length; i++){
+               microfono[i].style.backgroundColor="#3c404336";
+            }
             } catch {console.log("ERROR AL CAMBIAR EL MICROFONO")};
          
             try{
             //CAMARA
-            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = "#3c404336";
+            camara = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c uaILN JxICCe nJcgFc FTMc0c N2RpBe jY9Dbb');
+            for(var i = 0; i < camara.length; i++){
+               camara[i].style.backgroundColor="#3c404336";
+            }
             } catch { };
             
             try{
             //MANO
-            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = "#3c404336";
+            mano = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe fzRBVc tmJved xHd4Cb rmHNDe moJB3b');
+            for(var i = 0; i < mano.length; i++){
+               mano[i].style.backgroundColor="#3c404336";
+            }
             } catch { };
             
             try{
-            //PRESENTAR PANTALLA
-            document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.FfiOZe > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
+            //PRESENTAR PANTALLA Y TRES PUNTOS
+            presentar = document.getElementsByClassName('VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ tWDL4c  uaILN');
+            for(var i = 0; i < presentar.length; i++){
+               presentar[i].style.backgroundColor="#3c404336";
+            }
             } catch {console.log("ERROR AL CAMBIAR LA PRESENTACIÓN DE PANTALLA")};
          
+            /*
             try{
             //TRES PUNTOS
             document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.Nsfdxf > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = "#3c404336";
             } catch {console.log("ERROR AL CAMBIAR LAS OPCIONES")};
+            */
 
             try{
                //MENSAJERIA
@@ -862,6 +915,14 @@ function changeColor(elenlacexd){
             grabando[i].style.background="#ea43352e";
             }
             } catch { }
+
+            try{
+            //CARGANDO GRABACIÓN
+            grabando2 = document.getElementsByClassName('F9AaL B8OGLd');
+            for(var i = 0; i < grabando2.length; i++){
+               grabando2[i].style.backgroundColor="#ffffff00";
+            }
+            } catch { }
             
             try{
             //los que levantaron la mano
@@ -928,6 +989,20 @@ function changeColor(elenlacexd){
             subtitulostraducidos = document.getElementsByClassName('jEDmvc');
             for(var i = 0; i < subtitulostraducidos.length; i++){
             subtitulostraducidos[i].style.background = "#f8f9fa00";
+            };
+            } catch { }
+
+            var llamadme;
+            var llamadme2;
+            try{
+            //LLAMENMÉ USAR TELEFONO
+            llamadme = document.getElementsByClassName('aCsJod oJeWuf');
+            for(var i = 0; i < llamadme.length; i++){
+            llamadme[i].style.background = "#20212480";
+            };
+            llamadme2 = document.getElementsByClassName('r5iSrd Axoxm xYohmd');
+            for(var i = 0; i < llamadme2.length; i++){
+            llamadme2[i].style.background = "#20212480";
             };
             } catch { }
 
@@ -1070,7 +1145,13 @@ function changeColor(elenlacexd){
                     element = list[index];
                     todoeltexto = element.textContent;
                     function isImage(url3) {
+                     if (typeof url3 !== 'string') {
+                        return false;
+                     }
+                     return (url3.match(/^http[^\?]*.(jpg|jpeg|svg|gif|webp|avif|png|tiff|bmp)(\?(.*))?$/gmi) !== null);
+                     /*
                      return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
+                     */
                      };
                      function detectURLs(todoeltexto2) {
                      urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
@@ -1086,16 +1167,16 @@ function changeColor(elenlacexd){
                            return strr.trim().length === 0;
                          }
                         if(onlySpaces1(reemplazar2) === false){
-                        element.innerHTML = `<p>${reemplazar2}</p> <a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}' style='width:300px'></a>`
-                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}' style='width:300px'></a>`}
+                        element.innerHTML = `<p>${reemplazar2}</p> <a href="${detectar}" target="_blank"><img src='${detectar}'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}'></a>`
+                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}'></a> <a href="${detectar2}" target="_blank"><img src='${detectar2}'></a>`}
                      } else if(isImage(detectar) === true) {
                         reemplazar = element.textContent.replace(`${detectar}`, ``);
                         function onlySpaces2(strr) {
                            return strr.trim().length === 0;
                          }
                         if(onlySpaces2(reemplazar) === false){
-                        element.innerHTML = `<p>${reemplazar}</p> <a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a>`
-                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}' style='width:300px'></a></a></a>`}
+                        element.innerHTML = `<p>${reemplazar}</p> <a href="${detectar}" target="_blank"><img src='${detectar}'></a>`
+                        } else { element.innerHTML = `<a href="${detectar}" target="_blank"><img src='${detectar}'></a></a></a>`}
                      }  else { }
                      } catch { }
                     }
@@ -1220,8 +1301,6 @@ function detenerintervalo(){
       } catch { } }
       };
 
-// https://images.wallpapersden.com/image/download/takanashi-rikka-girl-dress_bGVnZpSZmpqtpaSklGZpaWWtbmVl.jpg
-
 function off(){
    try{
       document.body.style.backgroundImage = `url("https://www.schemecolor.com/images/color-image-thumb.php?tx&w=600&h=316&hex=202124")`;
@@ -1238,50 +1317,6 @@ function off(){
          alltext[i].style.color = "";
          }
          } catch {console.log("ERROR AL CAMBIAR TODO A LA NORMALIDAD")};
-      try{
-      //BARRA DE ABAJO
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR LA BARRA DE ABJAO")};
-   
-      try{
-      //FONDO
-      document.querySelector("#ow3").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR EL FONDO")};
-   
-      try{
-      //MICROFNO
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.AVk6L.gwmyUe > div > div > span > button").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR EL MICROFONO")};
-   
-      try{
-      //CAMARA
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.CrGlle.dq8L2c > div > span > button").style.backgroundColor = '';
-      } catch { };
-   
-      try{
-      //MANO
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.naeMJb > div > div > span > button").style.backgroundColor = '';
-      } catch { };
-   
-      try{
-      //PRESENTAR PANTALLA
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.FfiOZe > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR LA PRESENTACIÓN DE PANTALLA")};
-   
-      try{
-      //TRES PUNTOS
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.Nsfdxf > div > div.VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd > div:nth-child(1) > span > button").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR LAS OPCIONES")};
-   
-      try{
-      //COLGAR
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.NHaLPe.CoOyx > span > button").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR COLGAR")};
-   
-      try{
-      //SUBTITULOS
-      document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.DAQYgc.xPh1xb.P9KVBf > div.rceXCe > div > div.TlJx6e > div > span > button").style.backgroundColor = '';
-      } catch {console.log("ERROR AL CAMBIAR LOS SUBTITULOS")};
 }
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
@@ -1297,7 +1332,7 @@ if (window.trustedTypes && window.trustedTypes.createPolicy) {
  for (index = 0; index < list.length; ++index) {
      element = list[index];
      filename = element.textContent.split(" ")
-     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}' style='width:300px'>`}
+     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}'>`}
 
      const text="https://larepublica.pe/resizer/Im3jNnehRq5eu5G6tFky2SebrAQ=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/ZGCXB332FFEGLLWMZJQSCW5KHM.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bundesarchiv_Bild_183-R99621%2C_Heinrich_Himmler.jpg/220px-Bundesarchiv_Bild_183-R99621%2C_Heinrich_Himmler.jpg https://larepublica.pe/resizer/J_OvJSptEd7ObIZRSdMw9kfRdP4=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/PIKOF4HNNJAJ3LE5OK6TE6GSUM.jpg"; const myArray = text.split(" "); console.log(myArray[0])
 
@@ -1307,7 +1342,7 @@ var list, index, element, filename;
  for (index = 0; index < list.length; ++index) {
      element = list[index];
      filename = element.textContent.split(" ")
-     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}' style='width:300px'>`}
+     element.innerHTML = `<a href="${filename[0]}">${element.textContent}</a> <img src='${filename[0]}'>`}
 
 try{
    var list, index, element, filename;
@@ -1319,7 +1354,7 @@ try{
       return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
       }
      if(isImage(filename[0]) === true){
-        element.innerHTML = `<a href="${filename[0]}">${filename.textContent.replace(filename[0], '')}</a><img src='${filename[0]}' style='width:300px'><a href="${filename[0]}">${filename[0]}</a>`
+        element.innerHTML = `<a href="${filename[0]}">${filename.textContent.replace(filename[0], '')}</a><img src='${filename[0]}'><a href="${filename[0]}">${filename[0]}</a>`
       } else { }
      }
 } catch { }

@@ -1,6 +1,12 @@
 window.setInterval( function(){
   function isImage(url2) {
-               return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
+               if (typeof url2 !== 'string') {
+               return false;
+            }
+            return (url2.match(/^http[^\?]*.(jpg|jpeg|svg|gif|webp|avif|png|tiff|bmp)(\?(.*))?$/gmi) !== null);
+            /*
+            return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
+            */
             }
   const wallpaperurlxd = document.getElementById("wallpaperwithurl").value;
   if (isImage(wallpaperurlxd) == true && wallpaperurlxd.length > 15) {
@@ -33,7 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         try{
           function isImage(url3) {
-                return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url3);
+                    if (typeof url3 !== 'string') {
+                      return false;
+                  }
+                  return (url3.match(/^http[^\?]*.(jpg|jpeg|svg|gif|webp|avif|png|tiff|bmp)(\?(.*))?$/gmi) !== null);
+                  /*
+                  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url2);
+                  */
              }
              if(isImage(wallpaperurl) === true && wallpaperurl.length > 15){
               document.getElementById('wallpaper').src = wallpaperurl;

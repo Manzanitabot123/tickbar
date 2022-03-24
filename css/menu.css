@@ -54,6 +54,7 @@ img {
   width: 60%;
   margin: auto;
   display: block;
+  border-radius: 10px;
 }
 
 .container h1{
@@ -154,10 +155,10 @@ img {
 
 .custom-file-input::before {
   text-align: center;
-  content: '⏏ Subir una imagen';
+  content: '⏏ Upload Image';
   background-color: #ffffff;
   border-radius: 32px;
-  padding: 3px 45px;
+  padding: 3px 60px;
   outline: none;
   white-space: nowrap;
   cursor: pointer;
@@ -292,10 +293,9 @@ input.question:valid + label > span {
   font-size: 18px;
   color: rgb(255, 166, 0);
   display:block;
-  font-family: monospace;
   border-right: 0px solid;
-  width: 18ch;
-  animation: typing 2s steps(12);
+  width: 11ch;
+  animation: typing 1.5s steps(12);
   overflow: hidden;
 }
 

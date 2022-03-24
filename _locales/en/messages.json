@@ -1,0 +1,17 @@
+{
+   "application_title": {
+      "message": "Personalize your Google Meet call"
+   },
+   "application_description": {
+      "message": "Customize the colors and background of your Google Meet"
+   },
+   "missing_text": {
+      "message": "You must enter a link that ends in: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg | .tiff | .bmp"
+   },
+   "invalid_text": {
+      "message": "The image link is invalid."
+   },
+   "page_denied": {
+      "message": "You can only do that within a call."
+   }
+}
