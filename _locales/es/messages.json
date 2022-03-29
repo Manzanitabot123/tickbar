@@ -13,5 +13,26 @@
    },
    "page_denied": {
       "message": "Solo puedes hacer eso dentro de una llamada."
+   },
+   "game_without_connection": {
+      "message": "Jugar hasta que se restablezca la conexión"
+   },
+   "game_instructions": {
+      "message": "<p>Utiliza las flechas <code>⇦</code> y <code>⇨</code> o <code>A</code> y <code>D</code> para moverte, <code>⎵</code> para disparar.</p>"
+   },
+   "game_msg1": {
+      "message": "Juego terminado"
+   },
+   "game_msg2": {
+      "message": "Puntos: "
+   },
+   "game_msg3": {
+      "message": "Haz clic o presiona la barra espaciadora para volver a jugar"
+   },
+   "game_msg4": {
+      "message": "Vidas: "
+   },
+   "thanks": {
+      "message": "¡Gracias por usar Simple Custom Meet!"
    }
 }

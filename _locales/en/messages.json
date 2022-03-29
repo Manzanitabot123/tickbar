@@ -13,5 +13,26 @@
    },
    "page_denied": {
       "message": "You can only do that within a call."
+   },
+   "game_without_connection": {
+      "message": "Play until the connection is restored"
+   },
+   "game_instructions": {
+      "message": "<p>Use the <code>⇦</code> and <code>⇨</code> Arrows or <code>A</code> and <code>D</code> keys to move, <code>⎵</code> to shoot.</p>"
+   },
+   "game_msg1": {
+      "message": "Game Over"
+   },
+   "game_msg2": {
+      "message": "Score: "
+   },
+   "game_msg3": {
+      "message": "Click or press Spacebar to Play Again"
+   },
+   "game_msg4": {
+      "message": "Lives: "
+   },
+   "thanks": {
+      "message": "Thanks for using Simple Custom Meet!"
    }
 }

@@ -38,19 +38,10 @@ function onMouseUpdate(e) {
   el.style.backgroundPositionY = -y*(finalopacidad8/2500) + "px";
 }
 
+setInterval(function() {
 if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != undefined) || (document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != null))
    {
       //------------------------------------THANK YOU FOR USING SIMPLE CUSTOM MEET-------------------------------------------------
-
-      //TODO A BLANCO
-      var alltexto;
-      try{
-      alltexto = document.getElementsByTagName("*");
-      for (var i=0, max=alltexto.length; i < max; i++) {
-      alltexto[i].style.color = "white";
-      }
-      } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
-
       try{
       //AÑADIR EL FONDO
       chrome.storage.sync.get('wallpaper2', function (obj) {
@@ -61,7 +52,7 @@ if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuy
          } else {
             finalwallpaper = defwallpaper
          };
-         document.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${finalwallpaper})`;
+         document.body.style.backgroundImage = `linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(${finalwallpaper})`;
          document.body.style.backgroundSize = "104% 104%";
       });
       } catch { }
@@ -84,31 +75,495 @@ if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuy
                   }
       } catch { }
 
-      var reunionesproximas;
-      var reunionesproximas2;
       try{
-      //REUNIONES QUE SIGUEN
-      reunionesproximas = document.getElementsByClassName('VdLOD yUoCvf JxfZTd');
-                  for(var i = 0; i < reunionesproximas.length; i++){
-                     reunionesproximas[i].style.backgroundColor="#ffffff00";
-                  }
-      reunionesproximas2 = document.getElementsByClassName('mtr0Je');
-                  for(var i = 0; i < reunionesproximas2.length; i++){
-                     reunionesproximas2[i].style.backgroundColor="#ffffff00";
-                  }
+         var messagethx = chrome.i18n.getMessage("thanks");
+         document.getElementsByClassName("GNpa5c")[0].innerHTML = `<a href="https://meet.google.com/about/redirect/landing-learn-more/?hl=es_419" target="_blank" rel="noopener" class="IClWHc">Más información</a> sobre Google&nbsp;Meet <p>${messagethx}</p>`
       } catch { }
-
-      var menuparacrearllamada;
-      try{
-      //MENU PARA CREAR LLAMADA
-      menuparacrearllamada = document.getElementsByClassName('VfPpkd-StrnGf-rymPhb DMZ54e');
-                  for(var i = 0; i < menuparacrearllamada.length; i++){
-                     menuparacrearllamada[i].style.backgroundColor="black";
-                  }
-      } catch { }
+      //xd
+      
 }
+
+
+if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.TqTEJc > span") != undefined && document.getElementsByClassName("RkzbPb")[0].innerHTML === 'Perdiste la conexión de red. Intentando restablecerla…') || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.TqTEJc > span") != null && document.getElementsByClassName("RkzbPb")[0].innerHTML === 'Perdiste la conexión de red. Intentando restablecerla…'))
+   { 
+      try{
+      const gameWithoutConnection = chrome.i18n.getMessage("game_without_connection");
+      document.getElementsByClassName("RkzbPb")[0].innerHTML += `</p><button id="jugarPorMientras" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d qfvgSe AjXHhf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="ksBjEc lKxP2d qfvgSe AjXHhf" data-mdc-dialog-action="TvD9Pc" style="color: white;"><div class="VfPpkd-Jh9lGc" style="color: white;"></div><div class="VfPpkd-J1Ukfc-LhBDec" style="color: white;"></div><div class="VfPpkd-RLmnJb" style="color: white;"></div><span jsname="V67aGc" class="VfPpkd-vQzf8d" aria-hidden="true" style="color: rgb(88, 160, 255);">${gameWithoutConnection}</span></button>`;
+      
+      document.getElementById("jugarPorMientras").addEventListener('click', jugarAhora, false)
+     
+      function jugarAhora () {
+      try{
+      const gameInstructions = chrome.i18n.getMessage("game_instructions");
+      document.getElementsByClassName("RkzbPb")[0].innerHTML = '<div class="container">' +
+      '        <div class="game-wrap">' +
+      '            <canvas width="730px" height="405" id="game"></canvas>' +
+      '        </div>' +
+      '    </div>' +
+      `${gameInstructions}`;
+       (function(window){
+
+         var Game = {
+ 
+             init: function(){
+                 this.c = document.getElementById("game");
+                 this.c.width = this.c.width;
+                 this.c.height = this.c.height;
+                 this.ctx = this.c.getContext("2d");
+                 this.color = "#202124";
+                 this.bullets = [];
+                 this.enemyBullets = [];
+                 this.enemies = [];
+                 this.particles = [];
+                 this.bulletIndex = 0;
+                 this.enemyBulletIndex = 0;
+                 this.enemyIndex = 0;
+                 this.particleIndex = 0;
+                 this.maxParticles = 10;
+                 this.maxEnemies = 6;
+                 this.enemiesAlive = 0;
+                 this.currentFrame = 0;
+                 this.maxLives = 3;
+                 this.life = 0;
+                 this.binding();
+                 this.player = new Player();
+                 this.score = 0;
+                 this.paused = false;
+                 this.shooting = false;
+                 this.oneShot = false;
+                 this.isGameOver = false;
+             this.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+                 for(var i = 0; i<this.maxEnemies; i++){
+                     new Enemy();
+                     this.enemiesAlive++;
+                 }
+                 this.invincibleMode(2000);
+ 
+                 this.loop();
+             },
+ 
+             binding: function(){
+                 window.addEventListener("keydown", this.buttonDown);
+                 window.addEventListener("keyup", this.buttonUp);
+                 window.addEventListener("keypress", this.keyPressed);
+                 this.c.addEventListener("click", this.clicked);
+             },
+ 
+             clicked: function(){
+                 if(!Game.paused) {
+                     Game.pause();
+                 } else {
+                     if(Game.isGameOver){
+                         Game.init();
+                     } else {
+                         Game.unPause();
+                         Game.loop();
+                     }
+                 }
+             },
+ 
+             keyPressed: function(e){
+                 if(e.keyCode === 32){
+                     if(!Game.player.invincible  && !Game.oneShot){
+                         Game.player.shoot();
+                         Game.oneShot = true;
+                     }
+                     if(Game.isGameOver){
+                         Game.init();
+                     }
+             e.preventDefault();
+                 }
+             },
+ 
+             buttonUp: function(e){
+                 if(e.keyCode === 32){
+                     Game.shooting = false;
+                     Game.oneShot = false;
+                 e.preventDefault();
+                 }
+                 if(e.keyCode === 37 || e.keyCode === 65){
+                     Game.player.movingLeft = false;
+                 }
+                 if(e.keyCode === 39 || e.keyCode === 68){
+                     Game.player.movingRight = false;
+                 }
+             },
+ 
+             buttonDown: function(e){
+                 if(e.keyCode === 32){
+                     Game.shooting = true;
+                 }
+                 if(e.keyCode === 37 || e.keyCode === 65){
+                     Game.player.movingLeft = true;
+                 }
+                 if(e.keyCode === 39 || e.keyCode === 68){
+                     Game.player.movingRight = true;
+                 }
+             },
+ 
+             random: function(min, max){
+             return Math.floor(Math.random() * (max - min) + min);
+         },
+ 
+         invincibleMode: function(s){
+             this.player.invincible = true;
+             setTimeout(function(){
+                 Game.player.invincible = false;
+             }, s);
+         },
+ 
+         collision: function(a, b){
+                 return !(
+                 ((a.y + a.height) < (b.y)) ||
+                 (a.y > (b.y + b.height)) ||
+                 ((a.x + a.width) < b.x) ||
+                 (a.x > (b.x + b.width))
+                 )
+             },
+ 
+         clear: function(){
+             this.ctx.fillStyle = Game.color;
+             this.ctx.fillRect(0, 0, this.c.width, this.c.height);
+         },
+         
+         pause: function(){
+                 this.paused = true;
+         },
+ 
+         unPause: function(){
+                 this.paused = false;
+         },
+ 
+ 
+         gameOver: function(){
+             this.isGameOver = true;
+             this.clear();
+             var message = chrome.i18n.getMessage("game_msg1");
+             var message2 = chrome.i18n.getMessage("game_msg2") + Game.score;
+             var message3 = chrome.i18n.getMessage("game_msg3");
+             this.pause();
+             this.ctx.fillStyle = "white";
+             this.ctx.font = "bold 30px Acre, sans-serif";
+             this.ctx.fillText(message, this.c.width/2 - this.ctx.measureText(message).width/2, this.c.height/2 - 50);
+             this.ctx.fillText(message2, this.c.width/2 - this.ctx.measureText(message2).width/2, this.c.height/2 - 5);
+             this.ctx.font = "bold 16px Acre, sans-serif";
+             this.ctx.fillText(message3, this.c.width/2 - this.ctx.measureText(message3).width/2, this.c.height/2 + 30);
+         },
+ 
+         updateScore: function(){
+             this.ctx.fillStyle = "white";
+             this.ctx.font = "16px Acre, sans-serif";
+             this.ctx.fillText(chrome.i18n.getMessage("game_msg2") + this.score, 8, 20);
+             this.ctx.fillText(chrome.i18n.getMessage("game_msg4") + (this.maxLives - this.life), 8, 40);
+         },
+         
+             loop: function(){
+                 if(!Game.paused){
+                     Game.clear();
+                     for(var i in Game.enemies){
+                         var currentEnemy = Game.enemies[i];
+                         currentEnemy.draw();
+                         currentEnemy.update();
+                         if(Game.currentFrame % currentEnemy.shootingSpeed === 0){
+                             currentEnemy.shoot();
+                         }
+                     }
+                     for(var x in Game.enemyBullets){
+                         Game.enemyBullets[x].draw();
+                         Game.enemyBullets[x].update();
+                     }
+                     for(var z in Game.bullets){
+                         Game.bullets[z].draw();
+                         Game.bullets[z].update();
+                     }
+                     if(Game.player.invincible){
+                         if(Game.currentFrame % 20 === 0){
+                             Game.player.draw();
+                         }
+                     } else {
+                         Game.player.draw();
+                     }
+ 
+                 for(var i in Game.particles){
+                 Game.particles[i].draw();
+                 }
+                     Game.player.update();
+                     Game.updateScore();
+                     Game.currentFrame = Game.requestAnimationFrame.call(window, Game.loop);
+                 }
+             }
+ 
+         };
+ 
+ 
+ 
+ 
+ 
+ 
+         var Player = function(){
+             this.width = 60;
+             this.height = 20;
+             this.x = Game.c.width/2 - this.width/2;
+             this.y = Game.c.height - this.height;
+             this.movingLeft = false;
+             this.movingRight = false;
+             this.speed = 8;
+             this.invincible = false;
+             this.color = "white";
+         };
+ 
+ 
+         Player.prototype.die = function(){
+             if(Game.life < Game.maxLives){
+                 Game.invincibleMode(2000);  
+                 Game.life++;
+             } else {
+                 Game.pause();
+                 Game.gameOver();
+             }
+         };
+ 
+ 
+         Player.prototype.draw = function(){
+             Game.ctx.fillStyle = this.color;
+             Game.ctx.fillRect(this.x, this.y, this.width, this.height);
+         };
+ 
+ 
+         Player.prototype.update = function(){
+             if(this.movingLeft && this.x > 0){
+                 this.x -= this.speed;
+             }
+             if(this.movingRight && this.x + this.width < Game.c.width){
+                 this.x += this.speed;
+             }
+             if(Game.shooting && Game.currentFrame % 10 === 0){
+                 this.shoot();
+             }
+             for(var i in Game.enemyBullets){
+                 var currentBullet = Game.enemyBullets[i];
+                 if(Game.collision(currentBullet, this) && !Game.player.invincible){
+                     this.die();
+                     delete Game.enemyBullets[i];
+                 }
+             }
+         };
+ 
+ 
+         Player.prototype.shoot = function(){
+             Game.bullets[Game.bulletIndex] = new Bullet(this.x + this.width/2);
+             Game.bulletIndex++;
+         };
+ 
+ 
+ 
+ 
+ 
+ 
+         var Bullet = function(x){  
+             this.width = 8;
+             this.height = 20;
+             this.x = x;
+             this.y = Game.c.height - 10;
+             this.vy = 8;
+             this.index = Game.bulletIndex;
+             this.active = true;
+             this.color = "white";
+             
+         };
+ 
+ 
+         Bullet.prototype.draw = function(){
+             Game.ctx.fillStyle = this.color;
+             Game.ctx.fillRect(this.x, this.y, this.width, this.height);
+         };
+ 
+ 
+         Bullet.prototype.update = function(){
+             this.y -= this.vy;
+             if(this.y < 0){
+                 delete Game.bullets[this.index];
+             }
+         };
+ 
+ 
+ 
+ 
+ 
+ 
+         var Enemy = function(){
+             this.width = 60;
+             this.height = 20;
+             this.x = Game.random(0, (Game.c.width - this.width));
+             this.y = Game.random(10, 40);
+             this.vy = Game.random(1, 3) * .1;
+             this.index = Game.enemyIndex;
+             Game.enemies[Game.enemyIndex] = this;
+             Game.enemyIndex++;
+             this.speed = Game.random(2, 3);
+             this.shootingSpeed = Game.random(20, 80);
+             this.movingLeft = Math.random() < 0.5 ? true : false;
+             this.color = "hsl("+ Game.random(0, 360) +", 60%, 50%)";
+             
+         };
+ 
+ 
+         Enemy.prototype.draw = function(){
+             Game.ctx.fillStyle = this.color;
+             Game.ctx.fillRect(this.x, this.y, this.width, this.height);
+         };
+ 
+ 
+         Enemy.prototype.update = function(){
+             if(this.movingLeft){
+                 if(this.x > 0){
+                     this.x -= this.speed;
+                     this.y += this.vy;
+                 } else {
+                     this.movingLeft = false;
+                 }
+             } else {
+                 if(this.x + this.width < Game.c.width){
+                     this.x += this.speed;
+                     this.y += this.vy;
+                 } else {
+                     this.movingLeft = true;
+                 }
+             }
+             
+             for(var i in Game.bullets){
+                 var currentBullet = Game.bullets[i];
+                 if(Game.collision(currentBullet, this)){
+                     this.die();
+                     delete Game.bullets[i];
+                 }
+             } 
+         };
+ 
+         Enemy.prototype.die = function(){
+         this.explode();
+         delete Game.enemies[this.index];
+         Game.score += 15;
+         Game.enemiesAlive = Game.enemiesAlive > 1 ? Game.enemiesAlive - 1 : 0;
+         if(Game.enemiesAlive < Game.maxEnemies){
+             Game.enemiesAlive++;
+             setTimeout(function(){
+                 new Enemy();
+             }, 2000);
+             }
+         
+         };
+ 
+         Enemy.prototype.explode = function(){
+             for(var i=0; i<Game.maxParticles; i++){
+             new Particle(this.x + this.width/2, this.y, this.color);
+         }
+         };
+ 
+         Enemy.prototype.shoot = function(){
+             new EnemyBullet(this.x + this.width/2, this.y, this.color);
+         };
+ 
+         var EnemyBullet = function(x, y, color){
+             this.width = 8;
+             this.height = 20;
+             this.x = x;
+             this.y = y;
+             this.vy = 6;
+             this.color = color;
+             this.index = Game.enemyBulletIndex;
+             Game.enemyBullets[Game.enemyBulletIndex] = this;
+             Game.enemyBulletIndex++;
+         };
+ 
+         EnemyBullet.prototype.draw = function(){
+             Game.ctx.fillStyle = this.color;
+             Game.ctx.fillRect(this.x, this.y, this.width, this.height);
+         };
+ 
+         EnemyBullet.prototype.update = function(){
+             this.y += this.vy;
+             if(this.y > Game.c.height){
+                 delete Game.enemyBullets[this.index];
+             }
+         };
+ 
+ 
+ 
+ 
+         var Particle = function(x, y, color){
+             this.x = x;
+             this.y = y;
+             this.vx = Game.random(-5, 5);
+             this.vy = Game.random(-5, 5);
+             this.color = color || "orange";
+             Game.particles[Game.particleIndex] = this;
+             this.id = Game.particleIndex;
+             Game.particleIndex++;
+             this.life = 0;
+             this.gravity = .05;
+             this.size = 40;
+             this.maxlife = 100;
+         }
+ 
+         Particle.prototype.draw = function(){
+             this.x += this.vx;
+             this.y += this.vy;
+             this.vy += this.gravity;
+             this.size *= .89;
+             Game.ctx.fillStyle = this.color;
+             Game.ctx.fillRect(this.x, this.y, this.size, this.size);
+             this.life++;
+             if(this.life >= this.maxlife){
+             delete Game.particles[this.id];
+             }
+         };
+ 
+         Game.init();
+ 
+ 
+         }(window));
+      } catch { }
+      }
+      
+      } catch { }
+      } else { }
+      })
+
+
+// SOLICITAR UNIRSE O LISTO PA UNIRTE
+var xddxd = setInterval(function() {
+if ((document.querySelector("#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div") != undefined) || (document.querySelector("#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div") != null))
+   {
+      var listopaunirte;
+      try{
+         listopaunirte = document.getElementsByClassName('SSPGKf p2ZbV zKHdkd DNu0ud');
+      for(var i = 0; i < listopaunirte.length; i++){
+         listopaunirte[i].style.backgroundColor="#ffffff00";
+      }
+
+      try{
+      //AÑADIR EL FONDO
+      chrome.storage.sync.get('wallpaper2', function (obj) {
+         const defwallpaperSU = "https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg";
+         var finalwallpaperSU;
+         if (obj.wallpaper2 !== undefined) {
+            finalwallpaperSU = obj.wallpaper2
+         } else {
+            finalwallpaperSU = defwallpaperSU
+         };
+         document.body.style.backgroundImage = `linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(${finalwallpaperSU})`;
+         document.body.style.backgroundSize = "104% 104%";
+      });
+      } catch { }
+      } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
+   } else {
+      clearInterval(xddxd)
+   }
+}, 1000)
+
 var xd = setInterval(function() {
-   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != null))
+   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") != null))
    {
    console.log('Nice!');
    clearInterval(xd);
@@ -125,7 +580,7 @@ var xd = setInterval(function() {
 }}, 1000)
 
 chrome.runtime.onMessage.addListener(function (elenlace) {
-   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") != null))
+   if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") != undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") != null))
    {
    if (elenlace == "") {
       const missingURL = chrome.i18n.getMessage("missing_text");
@@ -689,7 +1144,7 @@ function changeColor(elenlacexd){
    } catch {console.log("ERROR AL CAMBIAR EL FONDO DE MENSAJERIA")};
 
    var id2 = setInterval(function() {
-      if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === null))
+      if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") === null))
          { 
            setTimeout(() => clearInterval(id2), 8000)
          }
@@ -731,7 +1186,7 @@ function changeColor(elenlacexd){
          // document.querySelector(".zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc, .zWfAib:not(.zTETae):not(.n9oEIb)>.Zf0RDc .Zi94Db").style.background = "#36373a45"
    var id1 = setInterval(function() {
          //VERIFICA QUE AUN ESTAS EN LA PAGINA
-         if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div") === null))
+         if ((document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") === undefined) || (document.querySelector("#ow3 > div.T4LgNb > div > div:nth-child(9) > div.crqnQb > div.UnvNgf.Sdwpn.P9KVBf > div.jsNRx") === null))
          { 
            setTimeout(() => clearInterval(id1), 8000)
          }
@@ -855,6 +1310,15 @@ function changeColor(elenlacexd){
             }
             } catch { }
 
+            var cuadroDeNoInternet;
+            try{
+            //CAMBIA A TRANSPARENTE EL CUADRO DE SIN INTERNET
+            cuadroDeNoInternet = document.getElementsByClassName('TZFSLb zfYLqc');
+            for(var i = 0; i < cuadroDeNoInternet.length; i++){
+               cuadroDeNoInternet[i].style.backgroundColor="#ffffff00";
+            }
+            } catch { }
+
             try{
             // BIENVENIDO AL MEET
             welcome1 = document.getElementsByClassName("xTGfdf");
@@ -921,6 +1385,15 @@ function changeColor(elenlacexd){
             grabando2 = document.getElementsByClassName('F9AaL B8OGLd');
             for(var i = 0; i < grabando2.length; i++){
                grabando2[i].style.backgroundColor="#ffffff00";
+            }
+            } catch { }
+
+            var perfilInvitación;
+            try{
+            //CAMBIAR COLOR DE LOS PERFILES DE LAS PERSONAS A LAS QUE SE LE ENVIA LA INVITACIÓN
+            perfilInvitación = document.getElementsByClassName('EDnbAc');
+            for(var i = 0; i < perfilInvitación.length; i++){
+               perfilInvitación[i].style.backgroundColor="#ffffff00";
             }
             } catch { }
             
@@ -1285,10 +1758,10 @@ function changeColor(elenlacexd){
 function tiempo(){
       var options = { weekday: 'long' };
       var hoy  = new Date();
-      var tiempocompleto
+      var tiempocompleto;
       tiempocompleto=document.getElementsByClassName("MQKmmc SudKRc Q4etDd wYNW7d");  // Find the elements
       for(var i = 0; i < tiempocompleto.length; i++){
-      tiempocompleto[i].innerText=`${hoy.toLocaleDateString("es-ES", options).toUpperCase()} • ${hoy.toLocaleTimeString()}`;
+      tiempocompleto[i].innerHTML=`<span>${hoy.toLocaleDateString("es-ES", options).toUpperCase()} &nbsp;&nbsp;</span><span jsname="d1rraf" class="E2mgnb" style="display: none;"></span></div><div class="NyMmmf"></div><span>&nbsp;&nbsp; ${hoy.toLocaleTimeString()}</span>`;
       }};
 
 function detenerintervalo(){
