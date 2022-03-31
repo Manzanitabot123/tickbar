@@ -3,7 +3,7 @@
       "message": "Personalize your Google Meet call"
    },
    "application_description": {
-      "message": "Customize the colors and background of your Google Meet"
+      "message": "Customize the colors and background to style your Google Meet"
    },
    "missing_text": {
       "message": "You must enter a link that ends in: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg | .tiff | .bmp"
@@ -13,6 +13,12 @@
    },
    "page_denied": {
       "message": "You can only do that within a call."
+   },
+   "changeImage": {
+      "message": "Change image"
+   },
+   "uploadImage": {
+      "message": "Upload image"
    },
    "game_without_connection": {
       "message": "Play until the connection is restored"
@@ -34,5 +40,11 @@
    },
    "thanks": {
       "message": "Thanks for using Simple Custom Meet!"
+   },
+   "check_version": {
+      "message": "You don't have the latest version of Simple Custom Meat. Do you want to update it now?"
+   },
+   "instruction_version": {
+      "message": "If you don't use Opera, the extension is downloaded for you to replace with the older version."
    }
 }

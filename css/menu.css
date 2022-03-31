@@ -155,7 +155,7 @@ img {
 
 .custom-file-input::before {
   text-align: center;
-  content: '⏏ Upload Image';
+  content: '⏏ Upload image';
   background-color: #ffffff;
   border-radius: 32px;
   padding: 3px 60px;

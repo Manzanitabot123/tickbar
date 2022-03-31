@@ -38,6 +38,27 @@ function onMouseUpdate(e) {
   el.style.backgroundPositionY = -y*(finalopacidad8/2500) + "px";
 }
 
+
+if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != undefined) || (document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != null))
+   {
+      //------------------------------------VERSION VERIFICATION-------------------------------------------------
+      try{
+         (async () => {
+            const versiónActual = "1.4.3";
+            var checkVersion = chrome.i18n.getMessage("check_version");
+            var versionInstructions = chrome.i18n.getMessage("instruction_version");
+            try {  
+              const res = await fetch("https://raw.githubusercontent.com/Manzanitabot123/Simple-Custom-Meet-Extension/main/manifest.json");  
+              const out = await res.json();
+              if (out.version != versiónActual) if (confirm(`${checkVersion} \n\n v` + versiónActual + " ➤ v" + out.version + `\n\n${versionInstructions}`)) {
+               window.open("https://addons.opera.com/extensions/download/simple-custom-meet/", '_blank');
+             } else { }
+            } catch {  }  
+          })()         
+      } catch { }
+      
+}
+
 setInterval(function() {
 if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != undefined) || (document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuypc") != null))
    {
@@ -64,6 +85,8 @@ if ((document.querySelector("#yDmH0d > c-wiz > div > div.S3RDod > div > div.Qcuy
                   for(var i = 0; i < fondoarriba.length; i++){
                      fondoarriba[i].style.backgroundColor="#ffffff00";
          }
+         
+      document.querySelector("#gb").style.backgroundColor = "#ffffff00"
       } catch { }
 
       var recuadroscambiantes;
@@ -555,6 +578,14 @@ if ((document.querySelector("#yDmH0d > c-wiz > div > div > div:nth-child(9) > di
          document.body.style.backgroundImage = `linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(${finalwallpaperSU})`;
          document.body.style.backgroundSize = "104% 104%";
       });
+      } catch { }
+
+      var cuadroCargando;
+      try{
+         cuadroCargando = document.getElementsByClassName('GN4RFc');
+         for(var i = 0; i < cuadroCargando.length; i++){
+            cuadroCargando[i].style.backgroundColor="#ffffff00";
+         }
       } catch { }
       } catch {console.log("ERROR AL CAMBIAR TODO A BLANCO")};
    } else {
@@ -1344,6 +1375,15 @@ function changeColor(elenlacexd){
             presentandoahora = document.getElementsByClassName('MON6Vd P9KVBf');
             for(var i = 0; i < presentandoahora.length; i++){
                presentandoahora[i].style.background = "#36373a4d";
+            }
+            } catch { }
+
+            var detenerPresentar;
+            try{
+            // X DETENER PRESENTACIÓN ACTUAL
+            detenerPresentar = document.getElementsByClassName('VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf txTes OcVpRe i63Nre VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c');
+            for(var i = 0; i < detenerPresentar.length; i++){
+               detenerPresentar[i].style.backgroundColor="#202124d1";
             }
             } catch { }
 

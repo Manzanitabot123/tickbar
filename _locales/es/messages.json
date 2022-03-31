@@ -3,7 +3,7 @@
       "message": "Personaliza tu llamada de Google Meet"
    },
    "application_description": {
-      "message": "Personaliza los colores y el fondo de tu Google Meet"
+      "message": "Personaliza los colores y el fondo para darle estilo a tu Google Meet"
    },
    "missing_text": {
       "message": "Debes ingresar un link que termine en: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg | .tiff | .bmp"
@@ -13,6 +13,12 @@
    },
    "page_denied": {
       "message": "Solo puedes hacer eso dentro de una llamada."
+   },
+   "changeImage": {
+      "message": "Cambiar imagen"
+   },
+   "uploadImage": {
+      "message": "Subir imagen "
    },
    "game_without_connection": {
       "message": "Jugar hasta que se restablezca la conexión"
@@ -34,5 +40,11 @@
    },
    "thanks": {
       "message": "¡Gracias por usar Simple Custom Meet!"
+   },
+   "check_version": {
+      "message": "No tienes la ultima versión de Simple Custom Meet. ¿Deseas actualizarlo ahora?"
+   },
+   "instruction_version": {
+      "message": "Si no usas Opera, se te descargará la extensión para que la reemplaces con con la versión anterior."
    }
 }
