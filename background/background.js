@@ -357,6 +357,7 @@ function handleMessage(request, sender, sendResponse) {
 };
 chrome.runtime.onMessage.addListener(handleMessage);
 
+
 //MANTENER PAGINA ABIERTA
 /*
 // URL de la página que quieres mantener abierta

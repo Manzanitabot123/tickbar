@@ -660,14 +660,24 @@
       return result;
     };
 
-    /* VISUALIZADOR PARA YOUTUBE */
+    /* VISUALIZADOR */
     let audioContext = null;
     let analyser = null;
     let dataArray = null;
     let bars = [];
     let currentSource = null;
     let lastPlayedElement = null;
-    let sourceMap = new WeakMap(); // Mapeo de elementos con sus `MediaElementSourceNode`
+    let sourceMap = new WeakMap();
+
+    chrome.storage.sync.get(["allowedDomains", "visualizerEnabled"], function (data) {
+        const allowed = data.allowedDomains || ["youtube.com", "spotify.com"];
+        const isEnabled = data.visualizerEnabled !== false;
+    
+        if (!isEnabled || !allowed.some(domain => window.location.hostname.includes(domain))) return;
+    
+        createVisualizer();
+        observeMediaChanges();
+    });
 
     // 🔹 Crea el visualizador si no existe
     function createVisualizer() {
@@ -675,10 +685,8 @@
     if (!visualizer) {
         visualizer = document.createElement("div");
         visualizer.id = "tb_visualizer";
-        visualizer.style.display = "none";
         container.appendChild(visualizer);
 
-        // Crear barras
         let numBars = 50;
         for (let i = 0; i < numBars; i++) {
         let bar = document.createElement("div");
@@ -689,15 +697,24 @@
     }
     }
 
-    // 🔹 Verifica cuál elemento <video> o <audio> se está reproduciendo
+    // 🔹 Detecta cuál `<video>` o `<audio>` está reproduciéndose
     function detectPlayingElement() {
     let elements = [...document.querySelectorAll("video, audio")];
-    let playingElement = elements.find(el => !el.paused);
-    if (!playingElement) return lastPlayedElement;
+    let playingElement = elements.find(el => !el.paused && el.readyState >= 2);
+
+    if (!playingElement) return lastPlayedElement; // Mantener el último si no hay ninguno
     return playingElement;
     }
 
-    // 🔹 Aplica AudioContext al nuevo elemento
+    // 🔹 Escanea todo el documento en busca de audio oculto (para Discord)
+    function findHiddenAudio() {
+    let hiddenAudio = [...document.querySelectorAll("audio")].find(audio => {
+        return audio.readyState >= 2 && !audio.paused;
+    });
+    return hiddenAudio || detectPlayingElement();
+    }
+
+    // 🔹 Aplica AudioContext correctamente
     function applyAudioContext(element) {
     if (!element || element === lastPlayedElement) return;
 
@@ -708,7 +725,12 @@
         dataArray = new Uint8Array(analyser.frequencyBinCount);
     }
 
-    // Reutilizar conexión si ya existe
+    // 🛠️ Reanudar el `AudioContext` si está suspendido
+    if (audioContext.state === "suspended") {
+        audioContext.resume().catch(err => console.warn("Error reanudando AudioContext:", err));
+    }
+
+    // ⚡ Reutilizar conexión si ya existe
     if (sourceMap.has(element)) {
         currentSource = sourceMap.get(element);
     } else {
@@ -721,48 +743,58 @@
         }
     }
 
-    // Si ya estaba conectado, no volver a conectar
+    // 🛑 Si ya estaba conectado, no volver a conectar
     if (!currentSource) return;
 
     currentSource.connect(analyser);
     analyser.connect(audioContext.destination);
     lastPlayedElement = element;
 
-    renderFrame(); // Iniciar visualización
+    renderFrame();
+    checkAudioProcessing(); // Verifica si se está procesando audio
     }
 
     // 🔹 Renderiza el visualizador de audio
     function renderFrame() {
     if (!analyser) return;
     requestAnimationFrame(renderFrame);
-    if(document.hidden || document.fullscreenElement) return;
-
+    if (document.fullscreenElement || document.hidden) return;
     analyser.getByteFrequencyData(dataArray);
+    let isSilent = dataArray.every(value => value === 0);
+    // 🎛️ Mostrar u ocultar el visualizador
+    let visualizer = document.getElementById("tb_visualizer");
+    if (visualizer) {
+        visualizer.style.display = isSilent ? "none" : "flex";
+    }
+    // 🔊 Actualizar barras solo si hay audio
+    if (!isSilent) {
+        bars.forEach((bar, i) => {
+            let barHeight = (dataArray[i] / 255) * 100;
+            bar.style.height = barHeight + "%";
+        });
+    }
+    }
 
-    var allZeros = dataArray.every(value => value === 0);
-    var visualizer = document.getElementById("tb_visualizer");
-    if (allZeros) {
-        visualizer.style.display = "none";
-    } else {
-        visualizer.style.display = "flex"; // O el estilo que quieras mostrar
-    };
+    // 🔹 Verifica si hay datos en el audio
+    function checkAudioProcessing() {
+    setTimeout(() => {
+        analyser.getByteFrequencyData(dataArray);
+        let isSilent = dataArray.every(value => value === 0);
 
-    bars.forEach((bar, i) => {
-        let barHeight = (dataArray[i] / 255) * 100;
-        bar.style.height = barHeight + "%";
-    });
+        if (isSilent) {
+        console.warn("No se detecta audio. Intentando reconectar...");
+        let newElement = findHiddenAudio();
+        if (newElement) applyAudioContext(newElement);
+        }
+    }, 2000); // Revisa después de 2 segundos
     }
 
     // 🔹 Observa cambios en la reproducción
     function observeMediaChanges() {
     setInterval(() => {
-        let activeElement = detectPlayingElement();
+        let activeElement = findHiddenAudio();
         applyAudioContext(activeElement);
-    }, 500); // Verifica cada 500ms
+    }, 500);
     }
-
-    // 🔹 Iniciar visualizador
-    createVisualizer();
-    observeMediaChanges();
 
 })();

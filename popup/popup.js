@@ -753,3 +753,43 @@ document.addEventListener("DOMContentLoaded", () => {
         renderEvents();
     })();
   });
+
+// Dominios permitidos para el visualizador
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("allowedDomains");
+    const saveButton = document.getElementById("saveButton");
+    const toggleButton = document.getElementById("toggleVisualizer");
+    const status = document.getElementById("status");
+
+    const DEFAULT_DOMAINS = ["youtube.com", "spotify.com"];
+
+    // 🔹 Cargar configuración guardada
+    chrome.storage.sync.get(["allowedDomains", "visualizerEnabled"], function (data) {
+        let savedDomains = data.allowedDomains || DEFAULT_DOMAINS;
+        textarea.value = savedDomains.join("\n");
+
+        let enabled = data.visualizerEnabled !== false; // Por defecto activado
+        toggleButton.textContent = enabled ? "Desactivar Visualizador" : "Activar Visualizador";
+    });
+
+    // 🔹 Guardar dominios en `chrome.storage`
+    saveButton.addEventListener("click", function () {
+        const domains = textarea.value.split("\n").map(d => d.trim()).filter(Boolean);
+        chrome.storage.sync.set({ "allowedDomains": domains }, function () {
+            status.textContent = "Guardado. Refresca la página.";
+            setTimeout(() => status.textContent = "", 2000);
+        });
+    });
+
+    // 🔹 Activar/Desactivar Visualizador
+    toggleButton.addEventListener("click", function () {
+        chrome.storage.sync.get("visualizerEnabled", function (data) {
+            let newState = !data.visualizerEnabled;
+            chrome.storage.sync.set({ "visualizerEnabled": newState }, function () {
+                toggleButton.textContent = newState ? "Desactivar Visualizador" : "Activar Visualizador";
+                status.textContent = "Guardado. Refresca la página.";
+                setTimeout(() => status.textContent = "", 2000);
+            });
+        });
+    });
+});
