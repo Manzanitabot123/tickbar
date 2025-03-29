@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.runtime.onMessage.addListener((message) => {
         if (message.command === "play" && message.audio) {
             player.src = message.audio;
-            player.volume = (message.volume || 50) / 100;
+            player.volume = (message.volume || 30) / 100;
             if(player.paused != true) player.play().catch(err => console.error("Error al reproducir:", err));
             document.title = message.name;
             updateMediaSession(message.name, message.image);

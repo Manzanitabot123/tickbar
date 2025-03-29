@@ -400,26 +400,33 @@ document.addEventListener("DOMContentLoaded", function () {
         if (data.volumeLevel !== undefined) volumeControl.value = data.volumeLevel;
         if (data.isPlaying !== undefined) {
             isPlaying = data.isPlaying;
-            playPause.innerText = isPlaying ? "Pausar" : "Reproducir";
         }
+        playPause.innerText = isPlaying ? "Pausar" : "Reproducir";
     });
 
     stationSelect.addEventListener("change", () => {
         chrome.runtime.sendMessage({ action: "setStation", station: stationSelect.value });
+        isPlaying = true;
+        playPause.innerText = "Pausar";
     });
 
     prevTrack.addEventListener("click", () => {
         chrome.runtime.sendMessage({ action: "prevTrack" });
+        isPlaying = true;
+        playPause.innerText = "Pausar";
     });
 
     nextTrack.addEventListener("click", () => {
         chrome.runtime.sendMessage({ action: "nextTrack" });
+        isPlaying = true;
+        playPause.innerText = "Pausar";
     });
 
     playPause.addEventListener("click", () => {
         isPlaying = !isPlaying;
         playPause.innerText = isPlaying ? "Pausar" : "Reproducir";
         chrome.runtime.sendMessage({ action: "togglePlay" });
+        console.log('aaa')
     });
     volumeControl.addEventListener("input", () => {
         chrome.runtime.sendMessage({ action: "setVolume", volume: volumeControl.value });

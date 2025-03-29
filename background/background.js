@@ -225,8 +225,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 // MUSIC
 let currentStation = "barroque";
 let currentIndex = 0;
-let isPlaying = true;  // Por defecto, la música está activa
-let volumeLevel = 50;
+let isPlaying = false;  // Por defecto, la música está desactivada
+let volumeLevel = 30;
 
 // Cargar configuración guardada al iniciar
 chrome.storage.local.get(["currentStation", "currentIndex", "volumeLevel", "isPlaying"], (data) => {
@@ -312,6 +312,9 @@ chrome.runtime.onMessage.addListener((message) => {
             if (data.isPlaying !== undefined) {
                 isPlaying = data.isPlaying;
                 isPlaying ? pauseMusic() : playMusic();
+            }
+            if (data.isPlaying == undefined||null) {
+                playMusic();
             }
         });
     }
