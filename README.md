@@ -21,7 +21,7 @@
 ```
 
 ## Descarga la última versión 🏹
-<a href="https://addons.opera.com/extensions/download/tickbar/" target="_blank">
+<a href="https://github.com/Manzanitabot123/tickbar/releases/download/tickbar/tickbar.zip" target="_blank">
 <img style="height: 5rem" class =“right” title="Descargalo haciendo click aquí" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Download.gif/1200px-Download.gif" alt="CLICK"></a></img>
 
 ## Proximamente 🌟
