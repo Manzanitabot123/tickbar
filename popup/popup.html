@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SETTINGS</title>
+  <link href="popup.css" rel="stylesheet" />
+  <script src="popup.js" defer></script>
+</head>
+<body class="wrapper">
+  <div id="loader" class="center"></div>
+  <input type="radio" name="nav" id="home" checked="checked"><input type="radio" name="nav" id="bar" class=""><input type="radio" name="nav" id="music"><input type="radio" name="nav" id="timer"><input type="radio" name="nav" id="event"><input type="radio" name="nav" id="config"><aside>
+      <div class="aside__inner">
+      <label for="home"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>home</title><path d="M4.48 17.93v9.776c0 .576.47 1.047 1.047 1.047h7.156c.576 0 1.048-.47 1.048-1.047V20.55h4.364v7.156c0 .576.47 1.047 1.047 1.047h6.81c.575 0 1.046-.47 1.046-1.047V17.93h2.967c.42 0 .803-.26.96-.644.157-.384.07-.838-.227-1.135L17.046 2.31c-.4-.402-1.064-.42-1.465-.017L1.32 16.133c-.313.297-.4.75-.244 1.153.157.4.54.645.96.645H4.48z"></path></svg></label>
+      <label for="bar"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>bar</title><path xmlns="http://www.w3.org/2000/svg" d="M5 6H19M5 10H15M5 14H19M5 18H15"></path></svg></label>
+      <label for="music"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>music</title>          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>                    <g id="SVGRepo_tracerCarrier"></g>                    <g id="SVGRepo_iconCarrier"> <path d="M9 19C9 20.6569 7.65685 22 6 22C4.34315 22 3 20.6569 3 19C3 17.3431 4.34315 16 6 16C7.65685 16 9 17.3431 9 19Z" stroke-width="1.5"></path> <path d="M21 17C21 18.6569 19.6569 20 18 20C16.3431 20 15 18.6569 15 17C15 15.3431 16.3431 14 18 14C19.6569 14 21 15.3431 21 17Z" stroke-width="1.5"></path> <path d="M9 19V8" stroke-width="1.5"></path> <path d="M21 17V6" stroke-width="1.5"></path> <path d="M15.7351 3.75466L11.7351 5.08799C10.4151 5.52801 9.75503 5.74801 9.37752 6.27179C9 6.79556 9 7.49128 9 8.88273V11.9997L21 7.99969V7.54939C21 5.01693 21 3.7507 20.1694 3.15206C19.3388 2.55341 18.1376 2.95383 15.7351 3.75466Z" stroke-width="1.5" stroke-linecap="round"></path> </g></svg></label>
+      <label for="timer"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>Timer</title><g id="SVGRepo_bgCarrier" stroke-width="0"></g>          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>                    <g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-width="2"></path> <path d="M12 7L12 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 4L20 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></label>
+      <label for="event"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>event</title><g id="SVGRepo_bgCarrier" stroke-width="0"></g>            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>                        <g id="SVGRepo_iconCarrier"> <path d="M7 4V2.5" stroke-width="1.5" stroke-linecap="round"></path> <path d="M17 4V2.5" stroke-width="1.5" stroke-linecap="round"></path> <circle cx="16.5" cy="16.5" r="1.5" stroke-width="1.5"></circle> <path d="M21.5 9H16.625H10.75M2 9H5.875" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C20.1752 21.4816 19.3001 21.7706 18 21.8985" stroke-width="1.5" stroke-linecap="round"></path> </g></svg></label>
+      <label for="config"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>config</title><g id="SVGRepo_bgCarrier" stroke-width="0"></g>              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>                            <g id="SVGRepo_iconCarrier"> <g>  <path d="M2 12c0-.865.11-1.703.316-2.504A3 3 0 0 0 4.99 4.867a9.99 9.99 0 0 1 4.335-2.505 3 3 0 0 0 5.348 0 9.99 9.99 0 0 1 4.335 2.505 3 3 0 0 0 2.675 4.63c.206.8.316 1.638.316 2.503 0 .865-.11 1.703-.316 2.504a3 3 0 0 0-2.675 4.629 9.99 9.99 0 0 1-4.335 2.505 3 3 0 0 0-5.348 0 9.99 9.99 0 0 1-4.335-2.505 3 3 0 0 0-2.675-4.63C2.11 13.704 2 12.866 2 12zm4.804 3c.63 1.091.81 2.346.564 3.524.408.29.842.541 1.297.75A4.993 4.993 0 0 1 12 18c1.26 0 2.438.471 3.335 1.274.455-.209.889-.46 1.297-.75A4.993 4.993 0 0 1 17.196 15a4.993 4.993 0 0 1 2.77-2.25 8.126 8.126 0 0 0 0-1.5A4.993 4.993 0 0 1 17.195 9a4.993 4.993 0 0 1-.564-3.524 7.989 7.989 0 0 0-1.297-.75A4.993 4.993 0 0 1 12 6a4.993 4.993 0 0 1-3.335-1.274 7.99 7.99 0 0 0-1.297.75A4.993 4.993 0 0 1 6.804 9a4.993 4.993 0 0 1-2.77 2.25 8.126 8.126 0 0 0 0 1.5A4.993 4.993 0 0 1 6.805 15zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path> </g> </g></svg></label>
+      <span class="background"></span>
+        </div>
+    </aside><div class="content">
+  
+      <div class="content__view content__home">
+        <img class="icon" title="Simple Custom Meet" src="../icons/icon.png" alt="Simple Custom Meet" data-iml="213672.90000000596">
+        <h1 style="
+        text-align: center;
+        margin: 0;
+        ">
+        <element class="blue">Tick</element> <element class="green">Bar</element> <element class="red">1.2</element>
+        </h1>
+        <p>Puedes manejar tu extensión desde aquí.</p>
+        <div class="fast">
+          <label for="music" class="btn">Reproducir música de fondo</label>
+          <label for="timer" class="btn">Iniciar temporizadores</label>
+          <label for="event" class="btn">Establecer horario</label>
+        </div>
+        <hr>
+        <div id="birthdaySection">
+            <h2>Mi Cumpleaños</h2>
+            <input type="date" id="birthdayDate">
+            <input type="color" id="birthdayColor">
+            <button id="saveBirthday">Guardar</button>
+        </div>
+        <hr>
+        <div id="journal">
+          <h2>Mis tareas</h2>
+          <button id="prevDayBtn">◀</button>
+          <span id="journal-date"></span>
+          <button id="nextDayBtn">▶</button>
+          <div id="taskContainer"></div>
+          <button id="addTask">Añadir Tarea</button>
+          <button id="saveTasks">Guardar Tareas</button>
+          <hr>
+          <h3>¿Cómo te sientes?</h3>
+          <div>
+              <button class="feeling" data-feeling="1">🙁</button>
+              <button class="feeling" data-feeling="2">😐</button>
+              <button class="feeling" data-feeling="3">😶</button>
+              <button class="feeling" data-feeling="4">🙂</button>
+              <button class="feeling" data-feeling="5">😀</button>
+              <span class="feeling" title="Promedio de Estado de Ánimo (últimos 30 días)" id="average-mood">😐</span>
+          </div>
+        </div>
+        <hr>
+        <div class="fast">
+          <button class="azul" style="margin-top: 0.3rem" id="link_tutorial" title="__MSG_linkTutorial__">__MSG_linkTutorial__</button>
+          <button class="verde"  style="margin-top: 0.3em"id="link_repo" title="__MSG_linkRepo__">__MSG_linkRepo__</button>
+          <button class="rojo" style="margin-top: 0.3em" id="link_sugerencia" title="__MSG_linkSugerencia__">__MSG_linkSugerencia__</button>
+        </div>
+        <hr>
+      </div>
+  
+      <div class="content__view content__bar">
+        <h1>CONFIGURACIÓN DE BARRAS</h1>
+        <div id="timeProgressSection">
+            <h2>Progreso de Tiempo</h2>
+            <label>Día:</label>
+            <input type="color" id="dayColor">
+            <br>
+            <label>Semana:</label>
+            <input type="color" id="weekColor">
+            <br>
+            <label>Mes:</label>
+            <input type="color" id="monthColor">
+            <br>
+            <label>Año:</label>
+            <input type="color" id="yearColor">
+            <br>
+            <button id="saveColors">Guardar</button>
+        </div> 
+        <hr>
+        <h3>Más</h3>
+        <form>
+          <label for="eta_marquee">Frases</label>
+          <input type="checkbox" id="eta_marquee" class=""><br>
+          <label for="eta_blackFont">Fuente negra</label>
+          <input type="checkbox" id="eta_blackFont" class=""><br>
+          <label for="eta_moreInfo">Más informativos</label>
+          <input type="checkbox" id="eta_moreInfo" class="">
+        </form>
+      </div>
+      
+      <div class="content__view content__music">
+        <h1>Radio de fondo</h1>
+        <div id="musicPlayer">
+            <select id="stationSelect">
+                <option value="barroque">Barroco</option>
+                <option value="coffee_shop">Café</option>
+                <option value="beach">Playa</option>
+                <option value="forest">Bosque</option>
+                <option value="experimental_temple">Templo</option>
+                <option value="rain">Lluvia</option>
+                <option value="campfire">Fogata</option>
+                <option value="morning_birds">Aves</option>
+                <option value="student_campus">Campus</option>
+                <option value="restaurants">Restaurante</option>
+                <option value="dusk_woods">Noche</option>
+                <option value="light_wind">Viento</option>
+                <option value="mystical_nature">Naturaleza</option>
+                <option value="park_by_river">Río</option>
+                <option value="quiet_city">Ciudad</option>
+                <option value="waves">Olas</option>
+                <option value="lofi">Lofi</option>
+                <option value="anime">Anime / Jpop</option>
+                <option value="phonk">Phonk</option>
+            </select>
+            <button id="prevTrack">Anterior</button>
+            <button id="togglePlay">Pausar</button>
+            <button id="nextTrack">Siguiente</button>
+            <label>Volumen:</label>
+            <input type="range" id="volumeControl" min="0" max="100" step="1">
+        </div>   
+      </div>
+      
+      <div class="content__view content__timer">
+        <h1>Configuración de Temporizadores</h1>
+        <div id="globalTimer">
+            <h2>Temporizador Global</h2>
+            <select id="globalTimeSelect">
+                <option value="1">1 min</option>
+                <option value="2">2 min</option>
+                <option value="5">5 min</option>
+                <option value="10">10 min</option>
+                <option value="30">30 min</option>
+                <option value="custom">Personalizado</option>
+            </select>
+            <input type="number" id="globalCustomTime" placeholder="Minutos" style="display: none;">
+            <button id="startGlobalTimer">Iniciar</button>
+            <button id="toggleGlobalTimer">Pausar/Reanudar</button>
+            <input type="color" id="globalTimerColor">
+        </div>
+        <hr>
+        <div id="localTimer">
+            <h2>Temporizador Local</h2>
+            <select id="localTimeSelect">
+                <option value="1">1 min</option>
+                <option value="2">2 min</option>
+                <option value="5">5 min</option>
+                <option value="10">10 min</option>
+                <option value="30">30 min</option>
+                <option value="custom">Personalizado</option>
+            </select>
+            <input type="number" id="localCustomTime" placeholder="Minutos" style="display: none;">
+            <button id="startLocalTimer">Iniciar</button>
+            <input type="color" id="localTimerColor">
+        </div> 
+        <hr>
+        <div id="rule30Section">
+            <h2>Temporizador 30-30-30</h2>
+            <p id="rule30Time">30 min</p>
+            <button id="increaseRule30">➕</button>
+            <button id="decreaseRule30">➖</button>
+            <button id="saveRule30Time">Guardar</button>
+            <input type="color" id="rule30Color">
+            <button id="toggleRule30">Desactivar</button>
+        </div>
+      </div>
+  
+    <div class="content__view content__event">
+        <h1>Administrador de eventos u horario</h1>
+                <div id="event-container"></div>
+        <button id="add-event" class="btn two-fact">Añadir Nuevo Evento</button>
+        <button id="save-changes" class="btn two-fact">Guardar Cambios</button>
+        
+    </div><div class="content__view content__config">
+      <h3>Miniatura de la extensión personalizable</h3>
+      <input type="text" name="name" class="question" id="wallpaperwithurl" required autocomplete="off" />
+      <label class="xddd" for="wallpaperwithurl"><span><div class="blink_me"><i class='fas fa-link'></i> Ingresa el link</div></span></label>
+      <br>
+      <button id="activar" class="button button-success" style="font-size:20px"><i class='fas fa-edit'></i>  Cambiar imagen</button>
+      <input type='file' class="custom-file-input" accept="image/*" style="font-size:20px" value="" title=" "/>
+      <a id="wallpaperurl" href="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" target="_blank">
+        <img class =“right” title="Imagen Actual" id="wallpaper" src="https://wallpaperforu.com/wp-content/uploads/2020/07/pixel-art-wallpaper-200722200326322048x1152.jpg" alt="Imagen Actual" style="height:100px"><script src="js/getwallpaper.js"></script>
+      </a>
+      <h1>MÁS AJUSTES</h1>
+      <p>Pronto...</p>
+    </div>
+  </div>
+  <div class="dev" style="opacity: 0;position: absolute;left: 0.15rem;bottom: 0;width: 4rem;z-index: 99999;"><div style="font-size: 0.6rem;line-height: 2rem;font-weight: 700;color: #000000;user-select: none;">by Manzbot</div></div>
+  <a style="display:none; position: fixed;top: 40px;right: -50px;text-decoration: none;background: #e64;-ms-transform: rotate(45deg);-webkit-transform: rotate(45deg);transform: rotate(45deg);" href="https://fauux.neocities.org/invlain" target="_blank"><div target="_blank" style="padding-left: 60px;padding-right: 60px;font-size: 14px;line-height: 40px;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-weight: 700;color: #fff;text-decoration: none;white-space: nowrap;">Tu sugerencia</div></a>
+</body>
+</html>

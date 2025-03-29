@@ -1,50 +1,68 @@
 {
-   "application_title": {
-      "message": "Personaliza tu llamada de Google Meet"
-   },
-   "application_description": {
-      "message": "Personaliza los colores y el fondo para darle estilo a tu Google Meet"
-   },
-   "missing_text": {
-      "message": "Debes ingresar un link que termine en: \n.jpg | .jpeg | .png | .webp | .avif | .gif | .svg | .tiff | .bmp"
-   },
-   "invalid_text": {
-      "message": "El enlace de la imagen no es valido."
-   },
-   "page_denied": {
-      "message": "Solo puedes hacer eso dentro de una llamada."
-   },
-   "changeImage": {
-      "message": "Cambiar imagen"
-   },
-   "uploadImage": {
-      "message": "Subir imagen "
-   },
-   "game_without_connection": {
-      "message": "Jugar hasta que se restablezca la conexión"
-   },
-   "game_instructions": {
-      "message": "<p>Utiliza las flechas <code>⇦</code> y <code>⇨</code> o <code>A</code> y <code>D</code> para moverte, <code>⎵</code> para disparar.</p>"
-   },
-   "game_msg1": {
-      "message": "Juego terminado"
-   },
-   "game_msg2": {
-      "message": "Puntos: "
-   },
-   "game_msg3": {
-      "message": "Haz clic o presiona la barra espaciadora para volver a jugar"
-   },
-   "game_msg4": {
-      "message": "Vidas: "
-   },
-   "thanks": {
-      "message": "¡Gracias por usar Simple Custom Meet!"
-   },
-   "check_version": {
-      "message": "No tienes la ultima versión de Simple Custom Meet. ¿Deseas actualizarlo ahora?"
-   },
-   "instruction_version": {
-      "message": "Si no usas Opera, se te descargará la extensión para que la reemplaces con con la versión anterior."
-   }
+  "on": {
+    "message": "Tickbar 1.1"
+  },
+  "extensionDesc": {
+    "message": "Gestor de TIEMPO y PRODUCTIVIDAD con temporizadores inteligentes"
+  },
+  "thanks": {
+    "message": "¡Gracias por usarlo!"
+  },
+  "linkSugerencia": {
+    "message": "Sugerencia"
+  },
+  "linkTutorial": {
+    "message": "Tutorial"
+  },
+  "linkRepo": {
+    "message": "Repositorio"
+  },
+  "imagenActual": {
+    "message": "Ver imagen actual"
+  },
+  "DevInfo": {
+    "message": "by Manzbot"
+  },
+  "playing": {
+    "message": "Reproduciendo ahora"
+  },
+  "extensionOff": {
+    "message": "Extensión desactivada"
+  },
+  "globalEndTime": {
+    "message": "Temporizador global finalizado"
+  },
+  "localEndTime": {
+    "message": "Temporizador local Finalizado"
+  },
+  "ruleEndTime": {
+    "message": "Regla 30-30-30 finalizado"
+  },
+  "backgroundAudio": {
+    "message": "Radio de fondo"
+  },
+  "segundos": {
+    "message": "segundo(s)"
+  },
+  "minutos": {
+    "message": "minuto(s)"
+  },
+  "horas": {
+    "message": "hora(s)"
+  },
+  "dias": {
+    "message": "día(s)"
+  },
+  "semanas": {
+    "message": "semana(s)"
+  },
+  "meses": {
+    "message": "mes(es)"
+  },
+  "anos": {
+    "message": "año(s)"
+  },
+  "toggleTimer": {
+    "message": "Click aquí para pausar/reanudar"
+  }
 }

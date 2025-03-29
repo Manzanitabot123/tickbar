@@ -1,0 +1,401 @@
+/*GRUPO*/
+tb {
+    display: flex;
+    backdrop-filter: blur(0px);
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99999;
+    transition: bottom 250ms ease-in-out;
+}
+tb:hover {
+    animation: tb_hover 0.6s forwards;
+}
+@keyframes tb_hover {
+    to { bottom: 0rem; }
+}
+/*BARRAS*/
+tb > .tb_barGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:1px;
+}
+tb > .tb_barGroup > .tb_bar {
+    opacity: 0.75;
+    width: 0%;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    background-color: #df000000;
+    transition: width 1000ms ease-in-out;
+    box-shadow: rgb(0, 0, 0) 1px 1px 4px 0px;
+    display: none;
+}
+tb > .tb_barGroup > .tb_bar:not([style*="width: 0%"]) {
+    display: flex;
+}
+tb:hover {
+    backdrop-filter: blur(3px);
+}
+tb:hover > .tb_barGroup > .tb_bar {
+    animation: tb_bar_hover 0.6s forwards !important;
+    opacity: 1;
+}
+@keyframes tb_bar_hover {
+    from { height: 0.3rem; }
+    to { height: 0.45rem; border-top-right-radius: 0.28rem; border-bottom-right-radius: 0.28rem; box-shadow: none;}
+}
+
+
+#eventProgressBar {
+    background-color: #FF1DCF;
+}
+#globaTimerProgressBar {
+    background-color: #5eff00;
+}
+#timerProgressBar {
+    background-color: #FF0000;
+}
+#birthdayProgressBar {
+    background-color: #ff7300;
+    animation: birthdayColorChange 4s infinite;
+}
+@keyframes birthdayColorChange {
+    0%,100% { background-color: red; }
+    25% { background-color: yellow; }
+    50% { background-color: blue; }
+    75% { background-color: green; }
+}
+#ruleProgressBar {
+    background-color: #ff006a;
+}
+#dayProgressBar {
+    background-color: #F59E0B;
+}
+#weekProgressBar {
+    background-color: #3A81F6;
+}
+#monthProgressBar {
+    background-color: #0BB87F;
+}
+#yearProgressBar {
+    background-color: #6366F1;
+}
+
+/*CUADROS*/
+tb > .tb_boxGroup {
+    pointer-events: none;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+tb:hover > .tb_boxGroup {
+    font-family: cursive !important;
+    font-size: 0.8rem !important;
+    pointer-events:all;
+    display: flex;
+    animation: tb_fadeIn2 0.6s forwards;
+}
+@keyframes tb_fadeIn2 {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+/*CUADROS DE LA IZQUIERDA*/
+tb > .tb_boxGroup > .tb_leftBoxGroup, tb > .tb_boxGroup > .tb_rightBoxGroup {
+    font-size: 0.8rem !important;
+    display: flex;
+    gap: 4px;
+}
+tb > .tb_boxGroup > .tb_leftBoxGroup > .tb_leftBox {
+    min-width: 20px;
+    height: 20px;
+    background-color: rgb(234, 0, 255);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem !important;
+    /*color: white;*/
+    padding: 0rem 0.4rem;
+    white-space: nowrap;
+    position: relative;
+    user-select: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: help;
+}
+tb > .tb_boxGroup > .tb_leftBoxGroup > .tb_leftBox > div {
+    font-family: cursive !important;
+    display: none;
+    text-transform: none !important;
+}
+tb > .tb_boxGroup > .tb_leftBoxGroup > .tb_leftBox:hover > div {
+    margin: 0.2rem;
+    display: flex;
+    font-size: 0.8rem !important;
+}
+tb > .tb_boxGroup > .tb_leftBoxGroup > .tb_leftBox > div::before {
+    content: ' • ';
+}
+/*FRASES | CUADRO DEL MEDIO */
+.tb_marqueeContainer {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: rgb(0 0 0 / 35%);
+    position: relative;
+    user-select: none;
+    font-size: 0.8rem !important;
+    border-radius: 1rem;
+    margin: 0rem 0.2rem;
+    border-width: 0.05rem;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    animation: colorChange 4s infinite;
+}
+.tb_marqueeWrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 200%; /* Doble del ancho para permitir el bucle */
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.tb_marqueeContent {
+    display: inline-block;
+    white-space: nowrap;
+    flex: 1;
+    user-select: none;
+    font-weight: bold;
+    text-shadow: 0px 0px 7px rgb(255, 255, 255); /* Agrega sombra al texto */
+}
+/*CUADROS DE LA DERECHA*/
+tb > .tb_boxGroup > .tb_rightBoxGroup > .tb_rightBox {
+    min-width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem !important;
+    /*color: white;*/
+    padding: 0rem 0.4rem;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+}
+#tb_taskProgressContainer { 
+    display: flex; 
+    gap: 0px; 
+    align-items: center; /* Asegura que todo esté centrado */
+}
+#tb_taskProgressContainer > div {
+    transform: scale(0.75);
+    width: 1.23rem;
+    aspect-ratio: 1/1; /* Mantiene siempre la proporción 1:1 */
+    border-radius: 50%;
+    background: red;
+}
+#tb_taskProgressContainer > div:hover {
+    transform: scale(1);
+}
+#tb_mood {
+    min-width: unset;
+    background-color: #ff000000;
+    display: flex;
+    font-size: 1rem !important;
+    scale: 1.5;
+    border-radius: 0;
+    padding: 0;
+    white-space: unset;
+    line-height: 1rem;
+}
+
+#tb_hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem !important;
+    padding: 0rem 0.4rem;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: help;
+}
+#tb_hour > div {
+    font-family: cursive !important;
+    display: none;
+    text-transform: none !important;
+}
+#tb_hour:hover > div {
+    margin: 0.2rem;
+    display: flex;
+    font-size: 0.8rem !important;
+}
+#tb_hour > div::after {
+    content: ' • ';
+}
+
+/*AUDIO*/
+#tb_visualizer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between; /* Asegura que las barras ocupen todo el ancho */
+    align-items: flex-end;
+    opacity: 0.20;
+    pointer-events: none;
+    z-index: -1;
+    margin-bottom: 5px;
+}
+
+#tb_visualizer > div {
+    flex: 1; /* Hace que todas las barras se ajusten automáticamente al ancho */
+    height: 50%;
+    background: linear-gradient(#fb5253, #00000000);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    pointer-events: none;
+    background-color: unset !important;
+}
+
+tb:hover > #tb_visualizer {
+    position: relative;
+    order: -1;
+    margin-bottom: -5px;
+}
+
+/* gestor de archivos */
+h1#header { animation: colorChange 4s infinite; }
+h1#header, div#parentDirLinkBox, tbody#tbody {
+    text-align:center;
+    font-family: cursive;
+}
+thead > tr#theader, .detailsColumn { display: none }
+body > table { width: 100%; }
+a.file, a.icon { 
+    background: none !important;
+    padding-inline-start: 0 !important;
+    text-decoration: none;
+    user-select: auto;
+}
+tbody td a {
+  color: #ff4949;
+  font-weight: normal;
+}
+tbody a:visited {
+  color: #3cff3c;
+}
+tbody a:hover {
+  text-decoration: none !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+tbody a:hover::before { content: '➡ ' }
+tbody a:hover::after { content: ' ⬅' }
+#parentDirText::before { content: '◄◄◄'; font-size: 20px; display: contents !important; }
+#parentDirText,h1#header { font-size: 0 }
+h1#header:before {
+  content: var(--contenido-before, '');
+  font-size: 30px;
+}
+body#files {
+  background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)), url('https://media.tenor.com/9F0m7jUgJ40AAAAC/wallpaper.gif'); background-size: cover;
+}
+/*Animación de color rgb del borde*/
+@keyframes colorChange {
+  100%,0%{
+    border-color: rgb(255, 121, 121);
+  }
+  8%{
+    border-color: rgb(255, 189, 124);
+  }
+  16%{
+    border-color: rgb(255, 255, 131);
+  }
+  25%{
+    border-color: rgb(189, 255, 122);
+  }
+  33%{
+    border-color: rgb(116, 255, 116);
+  }
+  41%{
+    border-color: rgb(123, 255, 189);
+  }
+  50%{
+    border-color: rgb(126, 255, 255);
+  }
+  58%{
+    border-color: rgb(125, 190, 255);
+  }
+  66%{
+    border-color: rgb(121, 121, 255);
+  }
+  75%{
+    border-color: rgb(191, 127, 255);
+  }
+  83%{
+    border-color: rgb(255, 125, 255);
+  }
+  91%{
+    border-color: rgb(255, 126, 190);
+  }
+}
+
+/*Texto informativo de tiempo restante y edad*/
+div#currentInfoBox {
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(240, 240, 240, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
+    z-index: 9999;
+    font-family: "Calibri Light";
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 0.7rem;
+    animation: colorChange 16s infinite;
+}
+
+div#currentInfoBox > div {
+  font-weight: bold;
+  font-size: 1.23rem;
+  flex: 1;
+  color: #333;
+  text-align: center;
+}
+div#currentInfoBox > div p {
+  font-size: 16px !important;
+  color: black !important;
+}
